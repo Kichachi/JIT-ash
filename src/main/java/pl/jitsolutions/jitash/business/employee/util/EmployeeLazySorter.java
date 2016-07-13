@@ -1,6 +1,9 @@
 package pl.jitsolutions.jitash.business.employee.util;
 
+import java.lang.reflect.Field;
+import java.text.Collator;
 import java.util.Comparator;
+import java.util.Locale;
 
 import org.primefaces.model.SortOrder;
 
@@ -18,11 +21,12 @@ public class EmployeeLazySorter implements Comparator<Employee> {
 
 	public int compare(Employee employee1, Employee employee2) {
 		try {
-			Object value1 = Employee.class.getField(this.sortField).get(employee1);
-			Object value2 = Employee.class.getField(this.sortField).get(employee2);
-
-			int value = ((Comparable)value1).compareTo(value2);
-
+			Field field = Employee.class.getDeclaredField(this.sortField);
+			field.setAccessible(true);
+			Object value1 = field.get(employee1);
+			Object value2 = field.get(employee2);
+			Collator col = Collator.getInstance(new Locale("pl","PL"));
+			int value = col.compare(value1,value2);
 			return SortOrder.ASCENDING.equals(sortOrder) ? value : -1 * value;
 		}
 		catch(Exception e) {

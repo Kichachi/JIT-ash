@@ -43,7 +43,7 @@ public class EmployeeTestDataProvider {
 		String surname = getRandomSurname();
 		return new Employee.EmployeeBuilder().withEmail(getRandomEmail(name,surname)).withName
 				(name).withSurname(surname).withPESEL(getRandomPESEL()).withTelephone
-				(getRandomTelephone()).build();
+				(getRandomTelephone()).withActive(getRandomActive()).build();
 	}
 
 	@PersistenceContext
@@ -74,4 +74,5 @@ public class EmployeeTestDataProvider {
 		DecimalFormat format = new DecimalFormat("00000000000");
 		return format.format(Math.random()*100000000000.0);
 	}
+	private boolean getRandomActive() { return (Math.random() >0.5) ? true : false;}
 }

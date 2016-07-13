@@ -20,7 +20,6 @@ public class Employee implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
 	//@Size(min=2,max=20)
 	//@NotNull
 	private String name;
@@ -122,6 +121,7 @@ public class Employee implements Serializable {
 		private String PESEL;
 		private String telephone;
 		private String email;
+		private boolean active;
 
 		public static EmployeeBuilder anEmployee() {
 			return new EmployeeBuilder();
@@ -152,6 +152,11 @@ public class Employee implements Serializable {
 			return this;
 		}
 
+		public EmployeeBuilder withActive(boolean active) {
+			this.active = active;
+			return this;
+		}
+
 		public Employee build() {
 			Employee employee = new Employee();
 			employee.setName(name);
@@ -159,6 +164,7 @@ public class Employee implements Serializable {
 			employee.setPESEL(PESEL);
 			employee.setTelephone(telephone);
 			employee.setEmail(email);
+			employee.setActive(active);
 			return employee;
 		}
 	}

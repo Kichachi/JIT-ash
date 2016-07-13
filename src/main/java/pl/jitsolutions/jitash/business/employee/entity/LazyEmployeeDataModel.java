@@ -1,12 +1,15 @@
 package pl.jitsolutions.jitash.business.employee.entity;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import javax.ejb.EJB;
+import javax.annotation.PostConstruct;
+import javax.ejb.Stateless;
+import javax.inject.Inject;
 
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;
@@ -14,14 +17,16 @@ import org.primefaces.model.SortOrder;
 import pl.jitsolutions.jitash.business.employee.boundry.EmployeesProvider;
 import pl.jitsolutions.jitash.business.employee.util.EmployeeLazySorter;
 
+@Stateless
 public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
-	@EJB
+	@Inject
 	private EmployeesProvider employeesProvider;
 	private boolean firstTime=true;
 	private List<Employee>datasource;
 
-	public LazyEmployeeDataModel(int first,int pageSize) {
-		//TODO pobranie z bazy tylko wartosci od first do first+pageSize
+	@PostConstruct
+	public void init() {
+		System.out.println("Inicjuje");
 		datasource = employeesProvider.getEmployees();
 	}
 	@Override
@@ -40,7 +45,6 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 
 	@Override
 	public List<Employee> load(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String,Object> filters) {
-		System.out.println("jestem w load " + " oto filtry: "  + filters);
 		List<Employee> data = new ArrayList<Employee>();
 		if(firstTime ) {
 			if(filters.isEmpty()) {
@@ -49,6 +53,7 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 				firstTime = false;
 			}
 		}
+		System.out.println("jestem w load " + " oto filtry: "  + filters);
 		//filter
 		for(Employee employee : datasource) {
 			boolean match = true;
@@ -58,7 +63,9 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 					try {
 						String filterProperty = it.next();
 						Object filterValue = filters.get(filterProperty);
-						String fieldValue = String.valueOf(employee.getClass().getField(filterProperty).get(employee));
+						Field field = employee.getClass().getDeclaredField(filterProperty);
+						field.setAccessible(true);
+						String fieldValue = String.valueOf(field.get(employee));
 
 						if(filterValue == null || fieldValue.startsWith(filterValue.toString())) {
 							match = true;

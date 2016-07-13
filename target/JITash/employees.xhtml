@@ -23,22 +23,22 @@
         <p:column headerText="Imię" sortBy="#{employee.name}" filterBy="#{employee.name}" filterStyle="width: 80%;">
             <h:outputText value="#{employee.name}" />
         </p:column>
-        <!--<p:column headerText="Nazwisko" sortBy="#{employee.surname}" filterBy="#{employee.surname}"-->
-                  <!--filterStyle="width: 80%;">-->
-            <!--<h:outputText value="#{employee.surname}" />-->
-        <!--</p:column>-->
-        <!--<p:column filterBy="#{employee.active}" headerText="Status" filterMatchMode="equals"-->
-                  <!--filterStyle="width: 80%;" >-->
-            <!--<f:facet name="filter">-->
-                <!--<p:selectOneButton onchange="PF('employeesTable').filter()" value="#{backupBean.status}">-->
-                    <!--<f:converter converterId="javax.faces.Boolean" />-->
-                    <!--<f:selectItem itemLabel="Wszyscy" itemValue="" />-->
-                    <!--<f:selectItem itemLabel="Aktywni" itemValue="true" />-->
-                    <!--<f:selectItem itemLabel="Nieaktywni" itemValue="false" />-->
-                <!--</p:selectOneButton>-->
-            <!--</f:facet>-->
-            <!--<h:outputText value="#{employee.active ? 'Aktywny': 'Nieaktywny'}" />-->
-        <!--</p:column>-->
+        <p:column headerText="Nazwisko" sortBy="#{employee.surname}" filterBy="#{employee.surname}"
+                  filterStyle="width: 80%;">
+            <h:outputText value="#{employee.surname}" />
+        </p:column>
+        <p:column filterBy="#{employee.active}" headerText="Status" filterMatchMode="equals"
+                  filterStyle="width: 80%;" >
+            <f:facet name="filter">
+                <p:selectOneButton onchange="PF('employeesTable').filter()" value="#{backupBean.status}">
+                    <f:converter converterId="javax.faces.Boolean" />
+                    <f:selectItem itemLabel="Wszyscy" itemValue="" />
+                    <f:selectItem itemLabel="Aktywni" itemValue="true" />
+                    <f:selectItem itemLabel="Nieaktywni" itemValue="false" />
+                </p:selectOneButton>
+            </f:facet>
+            <h:outputText value="#{employee.active ? 'Aktywny': 'Nieaktywny'}" />
+        </p:column>
     </p:dataTable>
 </h:form>
 
