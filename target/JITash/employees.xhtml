@@ -1,0 +1,46 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+</h:head>
+<body>
+
+<h:form id="form">
+    <p:dataTable var="employee" value="#{employeesView.employeesModel}" paginator="true" rows="10"
+                 paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink}
+                  {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                 rowsPerPageTemplate="10,20,50"   id="employeesTable" lazy="true" paginatorPosition="bottom"
+                 widgetVar="employeesTable"
+                 emptyMessage="Nie znaleziono pracowników o zadanych kryteriach">
+        <p:column headerText="Id" sortBy="#{employee.id}" filterBy="#{employee.id}" filterStyle="width: 80%;">
+            <h:outputText value="#{employee.id}" />
+        </p:column>
+        <p:column headerText="Imię" sortBy="#{employee.name}" filterBy="#{employee.name}" filterStyle="width: 80%;">
+            <h:outputText value="#{employee.name}" />
+        </p:column>
+        <!--<p:column headerText="Nazwisko" sortBy="#{employee.surname}" filterBy="#{employee.surname}"-->
+                  <!--filterStyle="width: 80%;">-->
+            <!--<h:outputText value="#{employee.surname}" />-->
+        <!--</p:column>-->
+        <!--<p:column filterBy="#{employee.active}" headerText="Status" filterMatchMode="equals"-->
+                  <!--filterStyle="width: 80%;" >-->
+            <!--<f:facet name="filter">-->
+                <!--<p:selectOneButton onchange="PF('employeesTable').filter()" value="#{backupBean.status}">-->
+                    <!--<f:converter converterId="javax.faces.Boolean" />-->
+                    <!--<f:selectItem itemLabel="Wszyscy" itemValue="" />-->
+                    <!--<f:selectItem itemLabel="Aktywni" itemValue="true" />-->
+                    <!--<f:selectItem itemLabel="Nieaktywni" itemValue="false" />-->
+                <!--</p:selectOneButton>-->
+            <!--</f:facet>-->
+            <!--<h:outputText value="#{employee.active ? 'Aktywny': 'Nieaktywny'}" />-->
+        <!--</p:column>-->
+    </p:dataTable>
+</h:form>
+
+</body>
+</html>
