@@ -21,12 +21,18 @@ public class EmployeeLazySorter implements Comparator<Employee> {
 
 	public int compare(Employee employee1, Employee employee2) {
 		try {
-			Field field = Employee.class.getDeclaredField(this.sortField);
+			Field field = Employee.class.getDeclaredField(sortField);
 			field.setAccessible(true);
 			Object value1 = field.get(employee1);
 			Object value2 = field.get(employee2);
-			Collator col = Collator.getInstance(new Locale("pl","PL"));
-			int value = col.compare(value1,value2);
+			int value;
+			if(value1.getClass().isAssignableFrom(String.class)){
+				Collator col = Collator.getInstance(new Locale("pl","PL"));
+				value = col.compare(value1,value2);
+			} else {
+				value = ((Comparable)value1).compareTo(value2);
+			}
+
 			return SortOrder.ASCENDING.equals(sortOrder) ? value : -1 * value;
 		}
 		catch(Exception e) {

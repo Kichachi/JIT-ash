@@ -3,7 +3,6 @@ package pl.jitsolutions.jitash.business.employee.entity;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -26,13 +25,12 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 
 	@PostConstruct
 	public void init() {
-		System.out.println("Inicjuje");
 		datasource = employeesProvider.getEmployees();
 	}
 	@Override
 	public Employee getRowData(String rowKey) {
 		for(Employee employee : datasource) {
-			if(employee.getId().equals(rowKey))
+			if(employee.getId().toString().equals(rowKey))
 				return employee;
 		}
 		return null;
@@ -45,36 +43,34 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 
 	@Override
 	public List<Employee> load(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String,Object> filters) {
-		List<Employee> data = new ArrayList<Employee>();
-		if(firstTime ) {
+		List<Employee> data = new ArrayList<>();
+		if(firstTime) {
 			if(filters.isEmpty()) {
 				filters.put("active", true);
 			} else {
 				firstTime = false;
 			}
 		}
-		System.out.println("jestem w load " + " oto filtry: "  + filters);
+		System.out.println("jestem w load " + " oto filtry: "  + filters + " oto flaga " + firstTime);
 		//filter
 		for(Employee employee : datasource) {
 			boolean match = true;
 
 			if (filters != null) {
-				for (Iterator<String> it = filters.keySet().iterator(); it.hasNext();) {
+				for (String filterProperty : filters.keySet()) {
 					try {
-						String filterProperty = it.next();
 						Object filterValue = filters.get(filterProperty);
 						Field field = employee.getClass().getDeclaredField(filterProperty);
 						field.setAccessible(true);
 						String fieldValue = String.valueOf(field.get(employee));
 
-						if(filterValue == null || fieldValue.startsWith(filterValue.toString())) {
+						if (filterValue == null || fieldValue.startsWith(filterValue.toString())) {
 							match = true;
-						}
-						else {
+						} else {
 							match = false;
 							break;
 						}
-					} catch(Exception e) {
+					} catch (Exception e) {
 						match = false;
 					}
 				}
@@ -92,7 +88,7 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 
 		//rowCount
 		int dataSize = data.size();
-		this.setRowCount(dataSize);
+		setRowCount(dataSize);
 
 		//paginate
 		if(dataSize > pageSize) {

@@ -19,8 +19,7 @@ public class EmployeesView implements Serializable {
 	private EmployeesProvider employeesProvider;
 	@Inject
 	private LazyDataModel<Employee> employeesModel;
-
-	public EmployeesView() { System.out.println("KONSTRUKTOR");	}
+	public EmployeesView() {}
 
 	public LazyDataModel<Employee> getEmployeesModel() {
 		return employeesModel;
