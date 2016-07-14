@@ -15,6 +15,7 @@ import pl.jitsolutions.jitash.business.employee.entity.Employee;
 @RequestScoped
 public class EmployeesView implements Serializable {
 
+
 	@Inject
 	private EmployeesProvider employeesProvider;
 	@Inject
@@ -23,6 +24,10 @@ public class EmployeesView implements Serializable {
 
 	public LazyDataModel<Employee> getEmployeesModel() {
 		return employeesModel;
+	}
+
+	public void setEmployeesModel(LazyDataModel<Employee> employeesModel) {
+		this.employeesModel = employeesModel;
 	}
 
 }

@@ -21,17 +21,20 @@ import pl.jitsolutions.jitash.business.employee.util.EmployeeLazySorter;
 public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 	@Inject
 	private EmployeesProvider employeesProvider;
-	private boolean firstTime=true;
-	private List<Employee>datasource;
+	private boolean allFlag = false;
+
+	private List<Employee> datasource;
 
 	@PostConstruct
 	public void init() {
 		datasource = employeesProvider.getEmployees();
 	}
+
 	@Override
 	public Employee getRowData(String rowKey) {
-		for(Employee employee : datasource) {
-			if(employee.getId().toString().equals(rowKey))
+		Long rowKeyLong = Long.parseLong(rowKey);
+		for (Employee employee : datasource) {
+			if (employee.getId().equals(rowKeyLong))
 				return employee;
 		}
 		return null;
@@ -43,19 +46,23 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 	}
 
 	@Override
-	public List<Employee> load(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String,Object> filters) {
+	public List<Employee> load(int first, int pageSize, String sortField, SortOrder sortOrder,
+			Map<String, Object> filters) {
+		System.out.println(first + " " + pageSize + " " + sortField + " " + sortOrder + " " + filters);
 		List<Employee> data = new ArrayList<>();
-		if(filters.isEmpty()) {
+		System.out.println("jestem w load" + " oto filtry: " + filters + " flaga " + allFlag);
+		if (filters.isEmpty()) {
 			filters.put("active", Status.ACTIVE);
 		}
-		if(filters.containsKey("active")){
-			if(filters.get("active").equals(Status.ALL.getValue())){
+		if (filters.containsKey("active")) {
+			if (filters.get("active").equals(Status.ALL.getValue())) {
+				allFlag = true;
 				filters.remove("active");
 			}
 		}
-		System.out.println("jestem w load 2" + " oto filtry: "  + filters + " oto flaga " + firstTime);
+		System.out.println("jestem w load 2" + " oto filtry: " + filters );
 		//filter
-		for(Employee employee : datasource) {
+		for (Employee employee : datasource) {
 			boolean match = true;
 
 			if (filters != null) {
@@ -64,10 +71,10 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 						Object filterValue = filters.get(filterProperty);
 						Field field = employee.getClass().getDeclaredField(filterProperty);
 						field.setAccessible(true);
-						String fieldValue = String.valueOf(field.get(employee)).toUpperCase(new Locale("pl","PL"));
+						String fieldValue = String.valueOf(field.get(employee)).toUpperCase(new Locale("pl", "PL"));
 
-						if (filterValue == null || fieldValue.startsWith(filterValue.toString().toUpperCase(new
-								Locale("pl","PL")))) {
+						if (filterValue == null || fieldValue
+								.startsWith(filterValue.toString().toUpperCase(new Locale("pl", "PL")))) {
 							match = true;
 						} else {
 							match = false;
@@ -79,13 +86,12 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 				}
 			}
 
-			if(match) {
+			if (match) {
 				data.add(employee);
 			}
 		}
-
 		//sort
-		if(sortField != null) {
+		if (sortField != null) {
 			Collections.sort(data, new EmployeeLazySorter(sortField, sortOrder));
 		}
 
@@ -93,19 +99,27 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 		int dataSize = data.size();
 		setRowCount(dataSize);
 
+
+		if(allFlag) {
+			allFlag=false;
+			filters.put("active",Status.ALL.getValue());
+		}
+
+		System.out.println(data.size());
 		//paginate
-		if(dataSize > pageSize) {
+		if (dataSize > pageSize) {
 			try {
 				return data.subList(first, first + pageSize);
-			}
-			catch(IndexOutOfBoundsException e) {
+			} catch (IndexOutOfBoundsException e) {
 				return data.subList(first, first + (dataSize % pageSize));
 			}
-		}
-		else {
+		} else {
 			return data;
 		}
 	}
 
+	public void setDatasource(List<Employee> datasource) {
+		this.datasource = datasource;
+	}
 
 }

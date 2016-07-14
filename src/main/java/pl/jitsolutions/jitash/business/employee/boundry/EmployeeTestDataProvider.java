@@ -16,7 +16,6 @@ import pl.jitsolutions.jitash.business.employee.entity.Status;
 @Singleton
 @Startup
 public class EmployeeTestDataProvider {
-
 	private final static String[] names;
 	private final static String[] surnames;
 	private final static String[] emails;
@@ -33,7 +32,7 @@ public class EmployeeTestDataProvider {
 	}
 
 	public List<Employee> createEmployees(int size){
-		List<Employee> employeeList = new ArrayList<Employee>();
+		List<Employee> employeeList = new ArrayList<>();
 		for (int i = 0;i<size;i++) {
 			employeeList.add(generateEmployee());
 		}

@@ -97,6 +97,11 @@ public class Employee implements Serializable {
 	public Employee() {}
 
 	@Override
+	public String toString() {
+		return name+" "+surname+" with id: "+id;
+	}
+
+	@Override
 	public int hashCode() {
 		int hash = 7;
 		hash = 59 * hash + (this.id != null ? this.id.hashCode() : 0);
@@ -119,6 +124,7 @@ public class Employee implements Serializable {
 	}
 
 	public static final class EmployeeBuilder {
+		private Long id;
 		private String name;
 		private String surname;
 		private String PESEL;
@@ -128,6 +134,11 @@ public class Employee implements Serializable {
 
 		public static EmployeeBuilder anEmployee() {
 			return new EmployeeBuilder();
+		}
+
+		public EmployeeBuilder withId(Long id) {
+			this.id = id;
+			return this;
 		}
 
 		public EmployeeBuilder withName(String name) {
@@ -168,6 +179,7 @@ public class Employee implements Serializable {
 			employee.setTelephone(telephone);
 			employee.setEmail(email);
 			employee.setActive(active);
+			employee.setId(id);
 			return employee;
 		}
 	}

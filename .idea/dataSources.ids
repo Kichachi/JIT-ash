@@ -5,11 +5,14 @@
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
-    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
-      <database id="1" name="JITadmin"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+      <database id="1" name="JITadmin">
+        <visible>1</visible>
+      </database>
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
+        <visible>1</visible>
         <introspection-state-number>623</introspection-state-number>
         <introspection-timestamp>2016-07-14.11:21:21.734</introspection-timestamp>
       </schema>
@@ -24,32 +27,32 @@
       <column id="5" parent="4" name="id">
         <state-number>623</state-number>
         <mandatory>1</mandatory>
-        <data-type>bigint</data-type>
+        <data-type>bigint|0</data-type>
         <default-expression>nextval(&apos;employee_id_seq&apos;::regclass)</default-expression>
       </column>
       <column id="6" parent="4" name="pesel">
         <state-number>623</state-number>
-        <data-type>varchar(255)</data-type>
+        <data-type>varchar(255)|0</data-type>
       </column>
       <column id="7" parent="4" name="active">
         <state-number>623</state-number>
-        <data-type>varchar(255)</data-type>
+        <data-type>varchar(255)|0</data-type>
       </column>
       <column id="8" parent="4" name="email">
         <state-number>623</state-number>
-        <data-type>varchar(255)</data-type>
+        <data-type>varchar(255)|0</data-type>
       </column>
       <column id="9" parent="4" name="name">
         <state-number>623</state-number>
-        <data-type>varchar(255)</data-type>
+        <data-type>varchar(255)|0</data-type>
       </column>
       <column id="10" parent="4" name="surname">
         <state-number>623</state-number>
-        <data-type>varchar(255)</data-type>
+        <data-type>varchar(255)|0</data-type>
       </column>
       <column id="11" parent="4" name="telephone">
         <state-number>623</state-number>
-        <data-type>varchar(255)</data-type>
+        <data-type>varchar(255)|0</data-type>
       </column>
       <index id="12" parent="4" name="employee_pkey">
         <object-id>16404</object-id>
