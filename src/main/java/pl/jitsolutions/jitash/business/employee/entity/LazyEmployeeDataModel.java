@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
@@ -63,9 +64,10 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 						Object filterValue = filters.get(filterProperty);
 						Field field = employee.getClass().getDeclaredField(filterProperty);
 						field.setAccessible(true);
-						String fieldValue = String.valueOf(field.get(employee));
+						String fieldValue = String.valueOf(field.get(employee)).toUpperCase(new Locale("pl","PL"));
 
-						if (filterValue == null || fieldValue.startsWith(filterValue.toString())) {
+						if (filterValue == null || fieldValue.startsWith(filterValue.toString().toUpperCase(new
+								Locale("pl","PL")))) {
 							match = true;
 						} else {
 							match = false;

@@ -8,11 +8,10 @@ import java.util.Random;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import pl.jitsolutions.jitash.business.employee.entity.Status;
+import javax.inject.Inject;
 
 import pl.jitsolutions.jitash.business.employee.entity.Employee;
+import pl.jitsolutions.jitash.business.employee.entity.Status;
 
 @Singleton
 @Startup
@@ -21,6 +20,8 @@ public class EmployeeTestDataProvider {
 	private final static String[] names;
 	private final static String[] surnames;
 	private final static String[] emails;
+	@Inject
+	private EmployeeCreator employeeCreator;
 
 	static {
 		names = new String[]{"Michał","Mikołaj","Mateusz","Piotr","Łukasz","Krzysztof","Marta","Agata","Monika",
@@ -47,16 +48,12 @@ public class EmployeeTestDataProvider {
 				(getRandomTelephone()).withActive(getRandomActive()).build();
 	}
 
-	@PersistenceContext
-	private EntityManager entityManager;
-
 	@PostConstruct
 	private void init() {
 		for (int i =0 ; i<200 ; i++) {
 			Employee employee = generateEmployee();
-			entityManager.persist(employee);
+			employeeCreator.save(employee);
 		}
-		entityManager.flush();
 	}
 	private String getRandomName() { return names[(int) (Math.random()*names.length)]; }
 	private String getRandomSurname() { return surnames[(int) (Math.random()*surnames.length)]; }

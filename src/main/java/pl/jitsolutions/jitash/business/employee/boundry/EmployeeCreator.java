@@ -4,6 +4,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceException;
+import javax.transaction.Transactional;
 
 import pl.jitsolutions.jitash.business.employee.entity.Employee;
 
@@ -12,12 +13,14 @@ public class EmployeeCreator {
 	@PersistenceContext
 	private EntityManager entityManager;
 
+	@Transactional
 	public String save(Employee employee) {
+
 		try{
 			entityManager.persist(employee);
 			entityManager.flush();
 			return "Dodano pracownika";
-		} catch (PersistenceException e){
+		} catch (PersistenceException e) {
 			e.printStackTrace();
 			return "Nie udalo sie dodac pracownika";
 		}
