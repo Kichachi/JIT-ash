@@ -2,7 +2,7 @@ package pl.jitsolutions.jitash.presentation.employee;
 
 import java.io.Serializable;
 
-import javax.faces.view.ViewScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -12,7 +12,7 @@ import pl.jitsolutions.jitash.business.employee.boundry.EmployeesProvider;
 import pl.jitsolutions.jitash.business.employee.entity.Employee;
 
 @Named
-@ViewScoped
+@RequestScoped
 public class EmployeesView implements Serializable {
 
 	@Inject

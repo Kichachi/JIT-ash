@@ -30,15 +30,16 @@
         <p:column filterBy="#{employee.active}" headerText="Status" filterMatchMode="equals"
                   filterStyle="width: 80%;" >
             <f:facet name="filter">
-                <p:selectOneButton onchange="PF('employeesTable').filter()" value="#{backupBean.status}">
-                    <f:converter converterId="javax.faces.Boolean" />
-                    <f:selectItem itemLabel="Wszyscy" itemValue="" />
-                    <f:selectItem itemLabel="Aktywni" itemValue="true" />
-                    <f:selectItem itemLabel="Nieaktywni" itemValue="false" />
+                <p:selectOneButton onchange="PF('employeesTable').filter()" value="#{backingBeanEmployee.status}">
+					<f:selectItems value="#{backingBeanEmployee.statuses}" var="status" itemValue="#{status.value}"
+								   itemLabel="#{status.label}" />
                 </p:selectOneButton>
             </f:facet>
-            <h:outputText value="#{employee.active ? 'Aktywny': 'Nieaktywny'}" />
+            <h:outputText value="#{employee.active.label}" />
         </p:column>
+		<p:column>
+			Pokaż szczegóły
+		</p:column>
     </p:dataTable>
 </h:form>
 

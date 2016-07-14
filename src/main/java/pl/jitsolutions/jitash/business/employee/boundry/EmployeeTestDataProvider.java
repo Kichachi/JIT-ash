@@ -10,6 +10,7 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import pl.jitsolutions.jitash.business.employee.entity.Status;
 
 import pl.jitsolutions.jitash.business.employee.entity.Employee;
 
@@ -74,5 +75,5 @@ public class EmployeeTestDataProvider {
 		DecimalFormat format = new DecimalFormat("00000000000");
 		return format.format(Math.random()*100000000000.0);
 	}
-	private boolean getRandomActive() { return (Math.random() >0.5) ? true : false;}
+	private Status getRandomActive() { return (Math.random() >0.5) ? Status.ACTIVE : Status.INACTIVE;}
 }

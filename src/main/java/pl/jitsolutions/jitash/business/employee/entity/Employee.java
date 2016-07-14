@@ -3,6 +3,8 @@ package pl.jitsolutions.jitash.business.employee.entity;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -34,7 +36,8 @@ public class Employee implements Serializable {
 	private String telephone;
 	//@NotNull
 	private String email;
-	private boolean active = true;
+	@Enumerated(EnumType.STRING)
+	private Status active = Status.ACTIVE ;
 
 
 	public Long getId() {
@@ -85,9 +88,9 @@ public class Employee implements Serializable {
 		this.email = email;
 	}
 
-	public boolean isActive() { return active;	}
+	public Status getActive() { return active;	}
 
-	public void setActive(boolean active) {
+	public void setActive(Status active) {
 		this.active = active;
 	}
 
@@ -121,7 +124,7 @@ public class Employee implements Serializable {
 		private String PESEL;
 		private String telephone;
 		private String email;
-		private boolean active;
+		private Status active;
 
 		public static EmployeeBuilder anEmployee() {
 			return new EmployeeBuilder();
@@ -152,7 +155,7 @@ public class Employee implements Serializable {
 			return this;
 		}
 
-		public EmployeeBuilder withActive(boolean active) {
+		public EmployeeBuilder withActive(Status active) {
 			this.active = active;
 			return this;
 		}

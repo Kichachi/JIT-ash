@@ -44,14 +44,15 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 	@Override
 	public List<Employee> load(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String,Object> filters) {
 		List<Employee> data = new ArrayList<>();
-		if(firstTime) {
-			if(filters.isEmpty()) {
-				filters.put("active", true);
-			} else {
-				firstTime = false;
+		if(filters.isEmpty()) {
+			filters.put("active", Status.ACTIVE);
+		}
+		if(filters.containsKey("active")){
+			if(filters.get("active").equals(Status.ALL.getValue())){
+				filters.remove("active");
 			}
 		}
-		System.out.println("jestem w load " + " oto filtry: "  + filters + " oto flaga " + firstTime);
+		System.out.println("jestem w load 2" + " oto filtry: "  + filters + " oto flaga " + firstTime);
 		//filter
 		for(Employee employee : datasource) {
 			boolean match = true;
