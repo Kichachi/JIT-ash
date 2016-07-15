@@ -26,13 +26,13 @@ public class Employee implements Serializable {
 	//@NotNull
 	private String name;
 	//@Size(min=2,max=20)
-//	@NotNull
+	//@NotNull
 	private String surname;
 	//@Size(min=11,max=11)
-//	@NotNull
+	//@NotNull
 	private String PESEL;
-//	@Size(min=9,max=9)
-//	@NotNull
+	//@Size(min=9,max=9)
+	//@NotNull
 	private String telephone;
 	//@NotNull
 	private String email;
@@ -101,27 +101,7 @@ public class Employee implements Serializable {
 		return name+" "+surname+" with id: "+id;
 	}
 
-	@Override
-	public int hashCode() {
-		int hash = 7;
-		hash = 59 * hash + (this.id != null ? this.id.hashCode() : 0);
-		return hash;
-	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (obj == null) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		final Employee other = (Employee) obj;
-		if ((this.id == null) ? (other.id != null) : !this.id.equals(other.id)) {
-			return false;
-		}
-		return true;
-	}
 
 	public static final class EmployeeBuilder {
 		private Long id;

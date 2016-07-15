@@ -20,8 +20,6 @@ public class EmployeesProvider {
 	public List<Employee>getEmployees() {
 		System.out.println("getEmployees");
 		TypedQuery<Employee> query = entityManager.createNamedQuery(Employee.GET_EMPLOYEES, Employee.class);
-		System.out.println("Ilosc wynikow:" + query.getResultList().size());
 		return query.getResultList();
-
 	}
 }

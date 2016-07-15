@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - JITadmin@localhost" uuid="f7dbe590-9912-46d6-a441-95799417f708">
+    <data-source name="PostgreSQL - jitash@localhost" uuid="1c6f7391-043b-4201-95bf-3d55ef764597">
       <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
+      <user-name>jitadmin</user-name>
+      <introspection-scope>jitash:public,pg_catalog,jitadmin</introspection-scope>
+      <resolve-scope>jitash:public,jitadmin</resolve-scope>
     </data-source>
   </component>
 </project>

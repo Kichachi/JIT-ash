@@ -1,68 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="PostgreSQL - JITadmin@localhost" uuid="f7dbe590-9912-46d6-a441-95799417f708">
+  <data-source name="PostgreSQL - jitash@localhost" uuid="1c6f7391-043b-4201-95bf-3d55ef764597">
     <database-info product="PostgreSQL" version="9.5.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
     <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
-      <database id="1" name="JITadmin">
+      <database id="1" name="jitash">
+        <object-id>16451</object-id>
         <visible>1</visible>
       </database>
-      <schema id="2" parent="1" name="public">
+      <database id="2" name="postgres">
+        <object-id>12373</object-id>
+      </database>
+      <database id="3" name="JITadmin">
+        <object-id>16394</object-id>
+      </database>
+      <database id="4" name="test">
+        <object-id>16406</object-id>
+      </database>
+      <database id="5" name="test_database">
+        <object-id>16409</object-id>
+      </database>
+      <schema id="6" parent="1" name="public">
         <object-id>2200</object-id>
-        <comment>standard public schema</comment>
         <visible>1</visible>
-        <introspection-state-number>623</introspection-state-number>
-        <introspection-timestamp>2016-07-14.11:21:21.734</introspection-timestamp>
+        <introspection-state-number>650</introspection-state-number>
+        <introspection-timestamp>2016-07-15.09:52:36.105</introspection-timestamp>
       </schema>
-      <sequence id="3" parent="2" name="employee_id_seq">
-        <object-id>16395</object-id>
-        <state-number>623</state-number>
+      <schema id="7" parent="1" name="pg_catalog">
+        <object-id>11</object-id>
+      </schema>
+      <schema id="8" parent="1" name="pg_toast">
+        <object-id>99</object-id>
+      </schema>
+      <schema id="9" parent="1" name="pg_temp_1">
+        <object-id>11816</object-id>
+      </schema>
+      <schema id="10" parent="1" name="pg_toast_temp_1">
+        <object-id>11817</object-id>
+      </schema>
+      <schema id="11" parent="1" name="information_schema">
+        <object-id>12081</object-id>
+      </schema>
+      <sequence id="12" parent="6" name="hibernate_sequence">
+        <object-id>16452</object-id>
+        <state-number>649</state-number>
       </sequence>
-      <table id="4" parent="2" name="employee">
-        <object-id>16397</object-id>
-        <state-number>623</state-number>
+      <table id="13" parent="6" name="book">
+        <object-id>16454</object-id>
+        <state-number>650</state-number>
       </table>
-      <column id="5" parent="4" name="id">
-        <state-number>623</state-number>
+      <column id="14" parent="13" name="id">
+        <state-number>650</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint|0</data-type>
-        <default-expression>nextval(&apos;employee_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="6" parent="4" name="pesel">
-        <state-number>623</state-number>
+      <column id="15" parent="13" name="author">
+        <state-number>650</state-number>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="7" parent="4" name="active">
-        <state-number>623</state-number>
+      <column id="16" parent="13" name="isbn">
+        <state-number>650</state-number>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="8" parent="4" name="email">
-        <state-number>623</state-number>
+      <column id="17" parent="13" name="title">
+        <state-number>650</state-number>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="9" parent="4" name="name">
-        <state-number>623</state-number>
-        <data-type>varchar(255)|0</data-type>
-      </column>
-      <column id="10" parent="4" name="surname">
-        <state-number>623</state-number>
-        <data-type>varchar(255)|0</data-type>
-      </column>
-      <column id="11" parent="4" name="telephone">
-        <state-number>623</state-number>
-        <data-type>varchar(255)|0</data-type>
-      </column>
-      <index id="12" parent="4" name="employee_pkey">
-        <object-id>16404</object-id>
+      <index id="18" parent="13" name="book_pkey">
+        <object-id>16460</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="13" parent="4" name="employee_pkey">
+      <key id="19" parent="13" name="book_pkey">
+        <object-id>16461</object-id>
         <columns>id</columns>
-        <underlying-index>employee_pkey</underlying-index>
+        <underlying-index>book_pkey</underlying-index>
         <primary>1</primary>
       </key>
     </database-model>
