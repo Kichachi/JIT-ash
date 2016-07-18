@@ -14,18 +14,18 @@ import static pl.jitsolutions.jitash.business.employee.entity.Status.ACTIVE;
 @RequestScoped
 public class BackingBeanEmployee implements Serializable {
 
-	private String status;
+	private Status status;
 
 	@PostConstruct
 	public void init() {
-		status = ACTIVE.getValue() ;
+		status = ACTIVE ;
 	}
 
-	public String getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Status status) {
 		this.status = status;
 	}
 	public Status[] getStatuses() {

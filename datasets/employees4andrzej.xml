@@ -1,0 +1,6 @@
+<dataset>
+<employee id="1" name="Andrzej" surname="Cymerys" email="MałgorzataCymerys@najlepszyserwisswiata.world" pesel="35713180346" telephone="5346294803" active="INACTIVE />
+<employee id="9" name="Andrzej" surname="Garbarczyk" email="MikołajGarbarczyk@jitsolutions.pl" pesel="69916787115" telephone="4336217391" active="ACTIVE />
+<employee id="13" name="Andrzej" surname="Lys" email="MałgorzataLys@gmail.com" pesel="72901155101" telephone="3335846457" active="INACTIVE />
+<employee id="16" name="Andrzej" surname="Lys" email="PawełLys@najlepszyserwisswiata.world" pesel="59549100528" telephone="1015972635" active="INACTIVE />
+</dataset>

@@ -1,0 +1,22 @@
+<dataset>
+<employee id="1" name="Andrzej" surname="Cymerys" email="MałgorzataCymerys@najlepszyserwisswiata.world" pesel="35713180346" telephone="5346294803" active="INACTIVE />
+<employee id="2" name="Małgorzata" surname="Lys" email="MałgorzataLys@najlepszyserwisswiata.world" pesel="19701661488" telephone="3422329608" active="ACTIVE />
+<employee id="3" name="Małgorzata" surname="Ziółkowski" email="MałgorzataZiółkowski@najlepszyserwisswiata.world" pesel="04949902070" telephone="3627306510" active="INACTIVE />
+<employee id="4" name="Monika" surname="Stobiński" email="MonikaStobiński@gmail.com" pesel="36371872142" telephone="633683969" active="INACTIVE />
+<employee id="5" name="Mateusz" surname="Cymerys" email="MateuszCymerys@wp.pl" pesel="74830221101" telephone="7206026470" active="ACTIVE />
+<employee id="6" name="Piotr" surname="Ziółkowski" email="PiotrZiółkowski@najlepszyserwisswiata.world" pesel="92362479140" telephone="6253143541" active="INACTIVE />
+<employee id="7" name="Agata" surname="Ziółkowski" email="AgataZiółkowski@jitsolutions.pl" pesel="48741774123" telephone="1107152917" active="INACTIVE />
+<employee id="8" name="Mikołaj" surname="Stobiński" email="MikołajStobiński@wp.pl" pesel="92320111193" telephone="634041073" active="INACTIVE />
+<employee id="9" name="Andrzej" surname="Garbarczyk" email="MikołajGarbarczyk@jitsolutions.pl" pesel="69916787115" telephone="4336217391" active="ACTIVE />
+<employee id="10" name="Michał" surname="Raszkowski" email="MichałRaszkowski@wp.pl" pesel="26864842653" telephone="2465846002" active="ACTIVE />
+<employee id="11" name="Piotr" surname="Garbarczyk" email="PiotrGarbarczyk@gmail.com" pesel="85456579185" telephone="5152288260" active="INACTIVE />
+<employee id="12" name="Monika" surname="Ziółkowski" email="MonikaZiółkowski@wp.pl" pesel="92686930745" telephone="2563757877" active="ACTIVE />
+<employee id="13" name="Andrzej" surname="Lys" email="MałgorzataLys@gmail.com" pesel="72901155101" telephone="3335846457" active="INACTIVE />
+<employee id="14" name="Michał" surname="Stobiński" email="MichałStobiński@najlepszyserwisswiata.world" pesel="69228573477" telephone="7353645506" active="ACTIVE />
+<employee id="15" name="Krzysztof" surname="Modrzejewski" email="KrzysztofModrzejewski@najlepszyserwisswiata.world" pesel="50256175234" telephone="1773176263" active="ACTIVE />
+<employee id="16" name="Andrzej" surname="Lys" email="PawełLys@najlepszyserwisswiata.world" pesel="59549100528" telephone="1015972635" active="INACTIVE />
+<employee id="17" name="Piotr" surname="Laptop" email="PiotrLaptop@gmail.com" pesel="79931593001" telephone="3060982380" active="INACTIVE />
+<employee id="18" name="Paweł" surname="Garbarczyk" email="PawełGarbarczyk@wp.pl" pesel="26281733667" telephone="7044835056" active="INACTIVE />
+<employee id="19" name="Michał" surname="Stobiński" email="MichałStobiński@najlepszyserwisswiata.world" pesel="49968411185" telephone="6470704725" active="INACTIVE />
+<employee id="20" name="Agata" surname="Lys" email="AgataLys@jitsolutions.pl" pesel="34352165065" telephone="7516022453" active="INACTIVE />
+</dataset>

@@ -2,6 +2,7 @@ package pl.jitsolutions.jitash.business.employee.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -10,6 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
 
 @Entity
 @NamedQueries({ @NamedQuery(name= Employee.GET_EMPLOYEES, query = "SELECT Employee FROM Employee employee") })
@@ -17,27 +22,30 @@ public class Employee implements Serializable {
 
 	private static final String PREFIX = "jitash.business.employee.entity";
 
-	public static final String GET_EMPLOYEES = "getEmployees";
+	public static final String GET_EMPLOYEES = PREFIX + "getEmployees";
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	//@Size(min=2,max=20)
-	//@NotNull
+	@Size(min=2, max=40, message="Imię powinno zawierać od 2 do 40 znaków.")
+	@NotNull(message="Imię nie może być puste")
 	private String name;
-	//@Size(min=2,max=20)
-	//@NotNull
+	@Size(min=2,max=40, message="Nazwisko powinno zawierać od 2 do 40 znaków.")
+	@NotNull(message="Nazwisko nie może być puste")
 	private String surname;
-	//@Size(min=11,max=11)
-	//@NotNull
+	@Size(min=11,max=11, message="PESEL powinien zawierać dokładnie 11 znaków.")
+	@NotNull(message="PESEL nie może być pusty")
+	@Column(unique=true)
 	private String PESEL;
-	//@Size(min=9,max=9)
-	//@NotNull
+	@Size(min=9,max=9, message="Telefon powinien zawierać dokładnie 9 znaków.")
+	@NotNull(message = "Telefon nie może być pusty")
 	private String telephone;
-	//@NotNull
+	@Email
+	@Size(min=5,max=70, message="Email powinien zawierać od 5 do 70.")
+	@NotNull
 	private String email;
 	@Enumerated(EnumType.STRING)
-	private Status active = Status.ACTIVE ;
+	private Status active = Status.ACTIVE;
 
 
 	public Long getId() {
@@ -96,6 +104,15 @@ public class Employee implements Serializable {
 
 	public Employee() {}
 
+	public Employee(String name, String surname, String PESEL, String telephone, String email, Status active) {
+		this.name = name;
+		this.surname = surname;
+		this.PESEL = PESEL;
+		this.telephone = telephone;
+		this.email = email;
+		this.active = active;
+	}
+
 	@Override
 	public String toString() {
 		return name+" "+surname+" with id: "+id;
@@ -110,15 +127,10 @@ public class Employee implements Serializable {
 		private String PESEL;
 		private String telephone;
 		private String email;
-		private Status active;
+		private Status active = Status.ACTIVE;
 
 		public static EmployeeBuilder anEmployee() {
 			return new EmployeeBuilder();
-		}
-
-		public EmployeeBuilder withId(Long id) {
-			this.id = id;
-			return this;
 		}
 
 		public EmployeeBuilder withName(String name) {
@@ -147,19 +159,12 @@ public class Employee implements Serializable {
 		}
 
 		public EmployeeBuilder withActive(Status active) {
-			this.active = active;
+			this.active=active;
 			return this;
 		}
 
 		public Employee build() {
-			Employee employee = new Employee();
-			employee.setName(name);
-			employee.setSurname(surname);
-			employee.setPESEL(PESEL);
-			employee.setTelephone(telephone);
-			employee.setEmail(email);
-			employee.setActive(active);
-			employee.setId(id);
+			Employee employee = new Employee(name,surname,PESEL,telephone,email,active);
 			return employee;
 		}
 	}

@@ -1,21 +1,63 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
 <h:head>
 
 </h:head>
 <body>
 
 <h:form id="form">
-    <p:dataTable var="employee" value="#{employeesView.employeesModel}" paginator="true" rows="10"
-                 paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink}
-                  {CurrentPageReport} {NextPageLink} {LastPageLink}"
-                 rowsPerPageTemplate="10,20,50"   id="employeesTable" lazy="true" paginatorPosition="bottom"
-                 widgetVar="employeesTable"
+
+    <p:commandButton id="addButton" value="+" type="button" onclick="PF('addEmployeeDlg').show();" />
+
+    <p:dialog header="Dodawanie pracownika" widgetVar="existEmployeeDlg" resizable="false" draggable="false"
+              modal="true" closable="false" closeOnEscape="false">
+        <h:outputText id="addEmployeViewMessage" value="#{addEmployeeView.employeeMessage}" />
+        <p:commandButton value="OK" update=":form:employeesTable" oncomplete="PF('existEmployeeDlg').hide()" />
+    </p:dialog>
+
+    <p:dialog header="Dodawanie pracownika" widgetVar="addEmployeeDlg" resizable="false" draggable="false" modal="true"
+              width="800">
+        <p:panelGrid columns="3" id="test" layout="grid">
+
+            <p:outputLabel value="Imie: " />
+            <p:inputText id="name" value="#{employeeModel.employee.name}">
+                <!--<f:validator validatorId="nameValidator" />-->
+            </p:inputText>
+            <p:message for="name" />
+
+            <p:outputLabel value="Nazwisko: " />
+            <p:inputText id="surname" value="#{employeeModel.employee.surname}">
+                <!--<f:validator validatorId="nameValidator" />-->
+            </p:inputText>
+            <p:message for="surname" />
+
+            <p:outputLabel value="Pesel: " />
+            <p:inputText id="pesel" value="#{employeeModel.employee.PESEL}">
+                <!--<f:validator validatorId="peselValidator" />-->
+            </p:inputText>
+            <p:message for="pesel" />
+
+            <p:outputLabel value="E-mail: " />
+            <p:inputText id="email" value="#{employeeModel.employee.email}">
+                <!--<f:validator validatorId="emailValidator" />-->
+            </p:inputText>
+            <p:message for="email" />
+
+            <p:outputLabel value="Nr telefonu: " />
+            <p:inputText id="phone" value="#{employeeModel.employee.telephone}">
+                <!--<f:validator validatorId="phoneValidator" />-->
+            </p:inputText>
+            <p:message for="phone" />
+        </p:panelGrid><br />
+        <p:commandButton value="Zapisz" update="test" action="#{addEmployeeView.save}"
+                         oncomplete="if (args &amp;&amp; !args.validationFailed) PF('existEmployeeDlg').show()" />
+        <p:outputLabel widgetVar="messageExists" value="#{addEmployeeView.employeeMessage}" style="color:red;" />
+    </p:dialog>
+    <p:dataTable var="employee" value="#{employeesView.employeesModel}" paginator="true" rows="10" paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink}
+                  {CurrentPageReport} {NextPageLink} {LastPageLink}" rowsPerPageTemplate="10,20,50" id="employeesTable"
+                 lazy="true" paginatorPosition="bottom" widgetVar="employeesTable"
                  emptyMessage="Nie znaleziono pracowników o zadanych kryteriach">
         <p:column headerText="Id" sortBy="#{employee.id}" filterBy="#{employee.id}" filterStyle="width: 80%;">
             <h:outputText value="#{employee.id}" />
@@ -27,12 +69,11 @@
                   filterStyle="width: 80%;">
             <h:outputText value="#{employee.surname}" />
         </p:column>
-        <p:column filterBy="#{employee.active}" headerText="Status" filterMatchMode="equals"
-                  filterStyle="width: 80%;" >
+        <p:column filterBy="#{employee.active}" headerText="Status" filterMatchMode="equals" filterStyle="width: 80%;">
             <f:facet name="filter">
                 <p:selectOneButton onchange="PF('employeesTable').filter()" value="#{backingBeanEmployee.status}">
-					<f:selectItems value="#{backingBeanEmployee.statuses}" var="status" itemValue="#{status.value}"
-								   itemLabel="#{status.label}" />
+                    <f:selectItems value="#{backingBeanEmployee.statuses}" var="status" itemValue="#{status.value}"
+                                   itemLabel="#{status.label}" />
                 </p:selectOneButton>
             </f:facet>
             <h:outputText value="#{employee.active.label}" />

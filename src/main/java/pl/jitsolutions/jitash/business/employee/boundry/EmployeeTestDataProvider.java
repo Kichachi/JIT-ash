@@ -23,10 +23,10 @@ public class EmployeeTestDataProvider {
 	private EmployeeCreator employeeCreator;
 
 	static {
-		names = new String[] { "Michał", "Mikołaj", "Mateusz", "Piotr", "Łukasz", "Krzysztof", "Marta", "Agata",
-				"Monika", "Małgorzata", "Paweł" };
-		surnames = new String[] { "Garbarczyk", "Stobiński", "Modrzejewski", "Raszkowski", "Ziółkowski", "Laptop",
-				"Cymerys", "Wicikowski", "Pelzner", "Milewicz", "Lys" };
+		names = new String[] { "Michal", "Mikolaj", "Mateusz", "Piotr", "Lukasz", "Krzysztof", "Marta", "Agata",
+				"Monika", "Malgorzata", "Pawel" };
+		surnames = new String[] { "Garbarczyk", "Stobinski", "Modrzejewski", "Raszkowski", "Ziolkowski", "Laptop",
+				"Cymerys", "Wicikowska", "Pelzner", "Milewicz", "Lys" };
 		emails = new String[] { "@wp.pl", "@gmail.com", "@jitsolutions.pl", "@najlepszyserwisswiata.world" };
 
 	}
@@ -50,7 +50,6 @@ public class EmployeeTestDataProvider {
 	@PostConstruct
 	private void init() {
 		for (int i = 0; i < 200; i++) {
-			System.out.println("Zapisuje pracownika " + i);
 			Employee employee = generateEmployee();
 			employeeCreator.save(employee);
 		}
@@ -65,14 +64,14 @@ public class EmployeeTestDataProvider {
 	}
 
 	private String getRandomEmail(String name, String surname) {
-		return name + surname + names[(int) (Math.random() * emails.length)];
+		return name + surname + emails[(int) (Math.random() * emails.length)];
 	}
 
 	private String getRandomTelephone() {
 		Random rand = new Random();
-		int num1 = (rand.nextInt(7) + 1) * 100 + (rand.nextInt(8) * 10) + rand.nextInt(8);
-		int num2 = rand.nextInt(743);
-		int num3 = rand.nextInt(10000);
+		int num1 = rand.nextInt(800) + 100;
+		int num2 = rand.nextInt(999);
+		int num3 = rand.nextInt(999);
 
 		DecimalFormat format = new DecimalFormat("000");
 		return format.format(num1) + format.format(num2) + format.format(num3);

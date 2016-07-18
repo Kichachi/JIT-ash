@@ -4,8 +4,8 @@
     <data-source name="PostgreSQL - jitash@localhost" uuid="1c6f7391-043b-4201-95bf-3d55ef764597">
       <secret-storage>master_key</secret-storage>
       <user-name>jitadmin</user-name>
-      <introspection-scope>jitash:public,pg_catalog,jitadmin</introspection-scope>
-      <resolve-scope>jitash:public,jitadmin</resolve-scope>
+      <introspection-scope>jitash:jitadmin,pg_catalog,public</introspection-scope>
+      <resolve-scope>jitash:jitadmin,public</resolve-scope>
     </data-source>
   </component>
 </project>

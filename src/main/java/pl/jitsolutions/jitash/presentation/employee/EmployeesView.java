@@ -14,8 +14,6 @@ import pl.jitsolutions.jitash.business.employee.entity.Employee;
 @Named
 @RequestScoped
 public class EmployeesView implements Serializable {
-
-
 	@Inject
 	private EmployeesProvider employeesProvider;
 	@Inject
