@@ -17,36 +17,38 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 
 @Entity
-@NamedQueries({ @NamedQuery(name= Employee.GET_EMPLOYEES, query = "SELECT Employee FROM Employee employee") })
+@NamedQueries({ @NamedQuery(name = Employee.GET_EMPLOYEES, query = "SELECT Employee FROM Employee employee"),
+					  @NamedQuery(name = Employee.GET_EMPLOYEE,
+								  query = "SELECT Employee FROM Employee employee WHERE employee.id = :id") })
+
 public class Employee implements Serializable {
 
 	private static final String PREFIX = "jitash.business.employee.entity";
 
 	public static final String GET_EMPLOYEES = PREFIX + "getEmployees";
-
+	public static final String GET_EMPLOYEE = PREFIX + "getEmployee";
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Size(min=2, max=40, message="Imię powinno zawierać od 2 do 40 znaków.")
-	@NotNull(message="Imię nie może być puste")
+	@Size(min = 2, max = 40, message = "Imię powinno zawierać od 2 do 40 znaków.")
+	@NotNull(message = "Imię nie może być puste")
 	private String name;
-	@Size(min=2,max=40, message="Nazwisko powinno zawierać od 2 do 40 znaków.")
-	@NotNull(message="Nazwisko nie może być puste")
+	@Size(min = 2, max = 40, message = "Nazwisko powinno zawierać od 2 do 40 znaków.")
+	@NotNull(message = "Nazwisko nie może być puste")
 	private String surname;
-	@Size(min=11,max=11, message="PESEL powinien zawierać dokładnie 11 znaków.")
-	@NotNull(message="PESEL nie może być pusty")
-	@Column(unique=true)
+	@Size(min = 11, max = 11, message = "PESEL powinien zawierać dokładnie 11 znaków.")
+	@NotNull(message = "PESEL nie może być pusty")
+	@Column(unique = true)
 	private String PESEL;
-	@Size(min=9,max=9, message="Telefon powinien zawierać dokładnie 9 znaków.")
+	@Size(min = 9, max = 9, message = "Telefon powinien zawierać dokładnie 9 znaków.")
 	@NotNull(message = "Telefon nie może być pusty")
 	private String telephone;
 	@Email
-	@Size(min=5,max=70, message="Email powinien zawierać od 5 do 70.")
-	@NotNull
+	@Size(min = 5, max = 70, message = "Email powinien zawierać od 5 do 70.")
+	@NotNull(message = "EMAIL nie może być pusty")
 	private String email;
 	@Enumerated(EnumType.STRING)
 	private Status active = Status.ACTIVE;
-
 
 	public Long getId() {
 		return id;
@@ -96,13 +98,16 @@ public class Employee implements Serializable {
 		this.email = email;
 	}
 
-	public Status getActive() { return active;	}
+	public Status getActive() {
+		return active;
+	}
 
 	public void setActive(Status active) {
 		this.active = active;
 	}
 
-	public Employee() {}
+	public Employee() {
+	}
 
 	public Employee(String name, String surname, String PESEL, String telephone, String email, Status active) {
 		this.name = name;
@@ -115,10 +120,8 @@ public class Employee implements Serializable {
 
 	@Override
 	public String toString() {
-		return name+" "+surname+" with id: "+id;
+		return name + " " + surname + " with id: " + id;
 	}
-
-
 
 	public static final class EmployeeBuilder {
 		private Long id;
@@ -159,12 +162,12 @@ public class Employee implements Serializable {
 		}
 
 		public EmployeeBuilder withActive(Status active) {
-			this.active=active;
+			this.active = active;
 			return this;
 		}
 
 		public Employee build() {
-			Employee employee = new Employee(name,surname,PESEL,telephone,email,active);
+			Employee employee = new Employee(name, surname, PESEL, telephone, email, active);
 			return employee;
 		}
 	}

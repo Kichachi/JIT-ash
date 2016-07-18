@@ -58,6 +58,12 @@ public class EmployeesProvider {
 		return entityManager.createQuery(criteriaQuery).getSingleResult().intValue();
 	}
 
+	public Employee getEmployee(Long id) {
+		TypedQuery<Employee> query = entityManager.createNamedQuery(Employee.GET_EMPLOYEE, Employee.class);
+		query.setParameter("id",id);
+		return query.getResultList().get(0);
+	}
+
 	public List<Employee> getResultList(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String,
 			Object> filters) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

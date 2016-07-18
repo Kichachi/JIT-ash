@@ -1,12 +1,16 @@
 package pl.jitsolutions.jitash.presentation.employee;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.servlet.http.HttpServletRequest;
 
 import org.primefaces.context.RequestContext;
 
@@ -43,11 +47,14 @@ public class AddEmployeeView implements Serializable {
 		}
 		RequestContext.getCurrentInstance().update("addEmployeeViewMessage");
 		return employeeMessage;
-		//TODO
-		//Detached entity passed to persist
 	}
-	//TODO
-	//Dodac zamykanie okienka dodania/odswiezanie
+
+	public void refreshIfSuccess() throws IOException {
+		if(employeeMessage.equals(successMessage)){
+			ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+			ec.redirect(((HttpServletRequest) ec.getRequest()).getRequestURI());
+		}
+	}
 
 	public String getEmployeeMessage() {
 		return employeeMessage;

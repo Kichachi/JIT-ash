@@ -1,0 +1,15 @@
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\presentation\employee\AddEmployeeView.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\presentation\employee\EmployeesView.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\JAXRSConfiguration.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeeCreator.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\util\BackingBeanEmployee.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\validation\PhoneValidator.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeeTestDataProvider.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\entity\Status.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\validation\EmailValidator.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\validation\PeselValidator.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\presentation\employee\EmployeeModel.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\entity\Employee.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeesProvider.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\entity\LazyEmployeeDataModel.java
+D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\validation\NameValidator.java

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+</h:head>
+<body>
+<f:metadata>
+    <f:viewParam name="id" value="#{employeeDetailsView.employee}" converter="#{employeeConverter}"
+                 converterMessage="Nieznany pracownik, użyj linka z listy pracowników." required="true"
+                 requiredMessage="Złe zapytanie, użyj linka z listy pracowników request, please use a link from within the system." />
+</f:metadata>
+<h:form id="form" rendered="#{not empty employeeDetailsView.employee}">
+    <p:outputPanel id="employeeDetail" style="text-align:center;">
+        <p:panelGrid columns="2" columnClasses="label,value">
+            <h:outputText value="Id:" />
+            <h:outputText value="#{employeeDetailsView.employee.id}" />
+
+            <h:outputText value="Imię:" />
+            <h:outputText value="#{employeeDetailsView.employee.name}" />
+
+            <h:outputText value="Nazwisko:" />
+            <h:outputText value="#{employeeDetailsView.employee.surname}" />
+
+            <h:outputText value="Email:" />
+            <h:outputText value="#{employeeDetailsView.employee.email}" />
+
+            <h:outputText value="Telefon:" />
+            <h:outputText value="#{employeeDetailsView.employee.telephone}" />
+
+            <h:outputText value="PESEL:" />
+            <h:outputText value="#{employeeDetailsView.employee.PESEL}" />
+
+            <h:outputText value="Status:" />
+            <h:outputText value="#{employeeDetailsView.employee.active.label}" />
+
+        </p:panelGrid>
+    </p:outputPanel>
+</h:form>
+
+</body>
+</html>
