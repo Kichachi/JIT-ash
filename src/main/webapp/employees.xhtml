@@ -3,12 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
 <h:head>
-
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css" />
 </h:head>
 <body>
 
 <h:form id="form">
-    <p:commandButton id="addButton" value="+" type="button" onclick="PF('addEmployeeDlg').show();" />
+    <p:menubar>
+        <f:facet name="options">
+            <p:commandButton id="menuAddEmployee" onclick="PF('addEmployeeDlg').show();" icon="fa fa-user-plus" />
+            <p:tooltip id="toolTipAddEmployee" for="menuAddEmployee" value="Dodaj pracownika"
+                       position="top" />
+            <h:outputText value="Zalogowana osoba" />
+            <p:commandButton type="button" value="Wyloguj" icon="ui-icon-extlink" />
+        </f:facet>
+    </p:menubar>
 
     <p:dialog header="Dodawanie pracownika" widgetVar="existEmployeeDlg" resizable="false" draggable="false"
               modal="true" closable="false" closeOnEscape="false">
@@ -86,7 +94,7 @@
     <p:dialog header="Dane pracownika" widgetVar="employeeDlg" modal="true" showEffect="fade" hideEffect="fade"
               resizable="false">
         <p:outputPanel id="employeeDetail" style="text-align:center;">
-            <p:panelGrid  columns="2" rendered="#{not empty employeesView.selectedEmployee}" columnClasses="label,value">
+            <p:panelGrid columns="2" rendered="#{not empty employeesView.selectedEmployee}" columnClasses="label,value">
                 <h:outputText value="Id:" />
                 <h:outputText value="#{employeesView.selectedEmployee.id}" />
 
@@ -110,7 +118,7 @@
 
             </p:panelGrid>
             <p:button value="Pokaż szczegóły pracownika" outcome="details">
-                <f:param name="id" value="#{employeesView.selectedEmployee.id}"/>
+                <f:param name="id" value="#{employeesView.selectedEmployee.id}" />
             </p:button>
         </p:outputPanel>
     </p:dialog>

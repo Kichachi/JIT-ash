@@ -12,6 +12,12 @@
                  requiredMessage="Złe zapytanie, użyj linka z listy pracowników request, please use a link from within the system." />
 </f:metadata>
 <h:form id="form" rendered="#{not empty employeeDetailsView.employee}">
+	<p:menubar>
+		<f:facet name="options">
+			<h:outputText value="Zalogowana osoba" />
+			<p:commandButton type="button" value="Wyloguj" icon="ui-icon-extlink" />
+		</f:facet>
+	</p:menubar>
     <p:outputPanel id="employeeDetail" style="text-align:center;">
         <p:panelGrid columns="2" columnClasses="label,value">
             <h:outputText value="Id:" />
