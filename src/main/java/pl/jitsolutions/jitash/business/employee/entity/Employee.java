@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
@@ -36,11 +37,11 @@ public class Employee implements Serializable {
 	@Size(min = 2, max = 40, message = "Nazwisko powinno zawierać od 2 do 40 znaków.")
 	@NotNull(message = "Nazwisko nie może być puste")
 	private String surname;
-	@Size(min = 11, max = 11, message = "PESEL powinien zawierać dokładnie 11 znaków.")
+	@Pattern(regexp="^([0-9]{11})$", message = "PESEL powinien zawierać dokładnie 11 znaków.")
 	@NotNull(message = "PESEL nie może być pusty")
 	@Column(unique = true)
 	private String PESEL;
-	@Size(min = 9, max = 9, message = "Telefon powinien zawierać dokładnie 9 znaków.")
+	@Pattern(regexp="^([0-9]{9})$", message = "Telefon powinien zawierać dokładnie 9 znaków.")
 	@NotNull(message = "Telefon nie może być pusty")
 	private String telephone;
 	@Email
