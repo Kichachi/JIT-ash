@@ -18,7 +18,7 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="Library-PU" />
-          <factory-entry name="jitash" />
+          <factory-entry name="jitash" value="1c6f7391-043b-4201-95bf-3d55ef764597" />
           <factory-entry name="persistenceUnit" value="1c6f7391-043b-4201-95bf-3d55ef764597" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />

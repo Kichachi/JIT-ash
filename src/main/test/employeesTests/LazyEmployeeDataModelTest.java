@@ -89,11 +89,11 @@ public class LazyEmployeeDataModelTest {
 		List<Employee> employees = mockEmployeeTestDataProvider.createEmployees(10);
 		mockLazyEmployeeDataModel.setDatasource(employees);
 		for(int i = 0 ; i <employees.size() ; i++) {
-			employees.get(i).setId(Long.valueOf(i+1));
+			employees.get(i).setEmployee_id(Long.valueOf(i+1));
 		}
-		Long idExpected = employees.get(4).getId();
+		Long idExpected = employees.get(4).getEmployee_id();
 		//when
-		Long idActual = mockLazyEmployeeDataModel.getRowData("5").getId();
+		Long idActual = mockLazyEmployeeDataModel.getRowData("5").getEmployee_id();
 		//then
 		Assert.assertEquals("IDs are not identical",idExpected,idActual);
 	}

@@ -38,7 +38,7 @@ public class EmployeeConverter implements Converter {
 		}
 
 		if (value instanceof Employee) {
-			Long id = ((Employee) value).getId();
+			Long id = ((Employee) value).getEmployee_id();
 			return (id != null) ? String.valueOf(id) : null;
 		} else {
 			throw new ConverterException("To nie jest prawidlowe ID pracownika " + value);

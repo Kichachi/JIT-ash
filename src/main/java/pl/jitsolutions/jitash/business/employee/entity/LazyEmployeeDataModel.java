@@ -9,21 +9,35 @@ import javax.inject.Inject;
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;
 
+import pl.jitsolutions.jitash.business.employee.boundry.AssignmentsProvider;
 import pl.jitsolutions.jitash.business.employee.boundry.EmployeesProvider;
 
 @Stateless
 public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 	@Inject
 	private EmployeesProvider employeesProvider;
+	@Inject
+	private AssignmentsProvider assignmentsProvider;
+
 	private boolean allFlag = false;
 
 	private List<Employee> datasource;
+
+	private List<Assignment> assignments;
+
+	public List<Assignment> getAssignments() {
+		return assignments;
+	}
+
+	public void setAssignments(List<Assignment> assignments) {
+		this.assignments = assignments;
+	}
 
 	@Override
 	public Employee getRowData(String rowKey) {
 		Long rowKeyLong = Long.parseLong(rowKey);
 		for (Employee employee : datasource) {
-			if (employee.getId().equals(rowKeyLong))
+			if (employee.getEmployee_id().equals(rowKeyLong))
 				return employee;
 		}
 		return null;
@@ -31,12 +45,13 @@ public class LazyEmployeeDataModel extends LazyDataModel<Employee> {
 
 	@Override
 	public Object getRowKey(Employee employee) {
-		return employee.getId();
+		return employee.getEmployee_id();
 	}
 
 	@Override
 	public List<Employee> load(int first, int pageSize, String sortField, SortOrder sortOrder,
 			Map<String, Object> filters) {
+		assignments = assignmentsProvider.getAssignments();
 		List<Employee> data;
 		if (filters.isEmpty()) {
 			filters.put("active", Status.ACTIVE);

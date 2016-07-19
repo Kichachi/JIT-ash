@@ -2,13 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9477dd9-9220-4d73-8e65-9a8b0ad256c4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeRemover.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Assignment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/AssignmentConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/RemoveEmployeeView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/employeesStyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash.war" afterPath="$PROJECT_DIR$/target/JITash.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/entity/Employee$EmployeeBuilder.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/entity/Employee$EmployeeBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/entity/Employee.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/entity/Employee.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/presentation/employee/EmployeesView.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/presentation/employee/EmployeesView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/entity/Employee$EmployeeBuilder.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/entity/Employee$EmployeeBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/entity/Employee.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/entity/Employee.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/presentation/employee/EmployeesView.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/presentation/employee/EmployeesView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/employeesTests/EmployeeCreatorTest.class" afterPath="$PROJECT_DIR$/target/test-classes/employeesTests/EmployeeCreatorTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/employeesTests/EmployeeTest.class" afterPath="$PROJECT_DIR$/target/test-classes/employeesTests/EmployeeTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/employeesTests/LazyEmployeeDataModelTest.class" afterPath="$PROJECT_DIR$/target/test-classes/employeesTests/LazyEmployeeDataModelTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JIT ASH.iml" afterPath="$PROJECT_DIR$/JIT ASH.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Employee.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeesView.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeesView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeCreatorTest.java" afterPath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeCreatorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeTest.java" afterPath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/employeesTests/LazyEmployeeDataModelTest.java" afterPath="$PROJECT_DIR$/src/main/test/employeesTests/LazyEmployeeDataModelTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/employees.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/employees.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/employees/details.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/employees/details.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/JITash/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/employees.xhtml" afterPath="$PROJECT_DIR$/target/JITash/employees.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/employees/details.xhtml" afterPath="$PROJECT_DIR$/target/JITash/employees/details.xhtml" />
     </list>
     <ignored path="JIT ASH.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,41 +85,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Employee.java">
+      <file leaf-file-name="Assignment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Assignment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PeselValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/PeselValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeTestDataProvider.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
+            <state relative-caret-position="333">
               <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="e#1615#1616#0" expanded="false" />
+                <element signature="e#1640#1641#0" expanded="false" />
+                <element signature="e#1675#1676#0" expanded="false" />
+                <element signature="e#1702#1703#0" expanded="false" />
+                <element signature="e#1744#1745#0" expanded="false" />
+                <element signature="e#1774#1775#0" expanded="false" />
+                <element signature="e#1803#1804#0" expanded="false" />
+                <element signature="e#1822#1823#0" expanded="false" />
+                <element signature="e#1861#1862#0" expanded="false" />
+                <element signature="e#1886#1887#0" expanded="false" />
+                <element signature="e#1926#1927#0" expanded="false" />
+                <element signature="e#1945#1946#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhoneValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/PhoneValidator.java">
+      <file leaf-file-name="AssignmentConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/AssignmentConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="119">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -87,70 +121,90 @@
       <file leaf-file-name="employees.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/employees.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="119">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Status.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Status.java">
+      <file leaf-file-name="RemoveEmployeeView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/RemoveEmployeeView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+            <state relative-caret-position="462">
+              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
               <folding>
-                <element signature="e#218#219#0" expanded="false" />
-                <element signature="e#237#238#0" expanded="false" />
-                <element signature="e#276#277#0" expanded="false" />
-                <element signature="e#301#302#0" expanded="false" />
-                <element signature="e#330#331#0" expanded="false" />
-                <element signature="e#349#350#0" expanded="false" />
-                <element signature="e#388#389#0" expanded="false" />
-                <element signature="e#413#414#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faces-config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
+      <file leaf-file-name="EmployeeRemover.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeRemover.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="357">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="employeesStyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/employeesStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+              <folding>
+                <marker date="1468936248107" expanded="true" signature="13:32" ph="{...}" />
+                <marker date="1468936248107" expanded="true" signature="86:105" ph="{...}" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="details.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/employees/details.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+            <state relative-caret-position="544">
+              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeDetailsView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeDetailsView.java">
+      <file leaf-file-name="EmployeesProvider.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="216">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.java">
+      <file leaf-file-name="AddEmployeeView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="406">
+              <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+              <folding>
+                <element signature="e#2491#2492#0" expanded="false" />
+                <element signature="e#2520#2521#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeCreatorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/employeesTests/EmployeeCreatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="554">
+              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -163,6 +217,7 @@
       <list>
         <option value="JUnit4 Test Class" />
         <option value="jsf" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -178,11 +233,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/JITash/business/employee/entity/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/EmployeeBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/Employees.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/BackupBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Status.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f7dbe590-9912-46d6-a441-95799417f708/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/util/EntityManagerHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/EmployeeLazySorterTest.java" />
@@ -191,7 +241,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/tests/employee/EmployeeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/tests/employee/EmployeesViewTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/EntityManagerHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/jboss-deployment-structure.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1c6f7391-043b-4201-95bf-3d55ef764597/console.sql" />
@@ -201,11 +250,9 @@
         <option value="$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProviderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/tests/employee/EmployeeLazySorterTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/tests/employee/LazyEmployeeDataModelTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/tests/employee/EmployeesProviderTest.java" />
         <option value="$PROJECT_DIR$/src/main/test/java/employee/LazyEmployeeDataModelTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/test/java/employee/EmployeesProviderTest.java" />
         <option value="$PROJECT_DIR$/src/main/test/employeesTests/LazyEmployeeDataModelTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/test-persistence.xml" />
@@ -214,17 +261,29 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/NameValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/PeselValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeesView.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeDetailsView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/employees.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/employees/details.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/PhoneValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/assignmentConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/AssignmentConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Assignment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeesView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeCreatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/employeesStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/employees.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeRemover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/RemoveEmployeeView.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/employees/details.xhtml" />
       </list>
     </option>
   </component>
@@ -250,10 +309,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="2064" />
+    <option name="height" value="1128" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -280,34 +339,33 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -325,63 +383,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="font-awesome-4.6.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -403,11 +409,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -419,21 +425,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="employeesTests" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -444,22 +450,14 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -477,11 +475,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -507,11 +505,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -530,14 +528,18 @@
               <option name="myItemId" value="jitash" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -567,11 +569,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -601,11 +603,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JIT-ash" />
+              <option name="myItemId" value="JIT ASH" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -635,6 +637,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -645,9 +648,10 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MicGarbar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MicGarbar/JIT-ash/JITash/JIT-ash-master" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -743,68 +747,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -1005,6 +947,9 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -1091,15 +1036,26 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Wildfly 10.0" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Widlfly 10.0.10.Final" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+    <configuration default="false" name="Wildfly 10.0" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 10.0.10.Final" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="JIT ASH:war">
@@ -1224,16 +1180,11 @@
       <workItem from="1468854951051" duration="178000" />
       <workItem from="1468855146992" duration="13945000" />
       <workItem from="1468869629841" duration="889000" />
+      <workItem from="1468908993493" duration="27632000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JUnit_tests - 2016.07.18 at 09h 03m 22s.xml">
-      <configuration name="JUnit tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnit_tests - 2016.07.18 at 09h 03m 26s.xml">
-      <configuration name="JUnit tests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JUnit_tests - 2016.07.18 at 09h 05m 22s.xml">
       <configuration name="JUnit tests" configurationId="JUnit" />
     </history-entry>
@@ -1258,9 +1209,15 @@
     <history-entry file="JUnit_tests - 2016.07.18 at 09h 27m 33s.xml">
       <configuration name="JUnit tests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JUnit_tests - 2016.07.19 at 15h 41m 26s.xml">
+      <configuration name="JUnit tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnit_tests - 2016.07.19 at 15h 42m 27s.xml">
+      <configuration name="JUnit tests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115960000" />
+    <option name="totallyTimeSpent" value="143592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1272,11 +1229,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="1358" y="-8" width="2064" height="1128" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31310943" sideWeight="0.36247334" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.320603" sideWeight="0.22954091" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25040916" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1287,20 +1244,20 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206934" sideWeight="0.7915778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.320603" sideWeight="0.77045906" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.48773986" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23293608" sideWeight="0.44296375" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2321608" sideWeight="0.41666666" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964823" sideWeight="0.49600798" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21668473" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31310943" sideWeight="0.63752663" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42211056" sideWeight="0.6252495" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23726977" sideWeight="0.467484" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2020958" sideWeight="0.31578946" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20149253" sideWeight="0.68421054" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2010978" sideWeight="0.3239645" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2010978" sideWeight="0.6760355" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763818" sideWeight="0.48403195" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964823" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1311,7 +1268,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14221556" sideWeight="0.5059701" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964823" sideWeight="0.65868264" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.48614073" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1368,11 +1325,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="50" />
+      <option name="time" value="76" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JBossConfiguration">
         <watch expression="employeeModel" language="JAVA" />
+        <watch expression="criteriaBuilder" />
       </configuration>
     </watches-manager>
   </component>
@@ -1381,39 +1339,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/JITash/business/employee/entity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/pl/jitsolutions/jitash/business/employee/boundry.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/EmployeeBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/6.0/primefaces-6.0-sources.jar!/org/primefaces/component/datatable/DataTableRenderer.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/faces/component/UIInput.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/6.0/primefaces-6.0-sources.jar!/org/primefaces/model/LazyDataModel.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/util/EntityManagerHelper.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.jar!/org/jboss/logging/Logger.class">
@@ -1456,14 +1381,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/test-persistence.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/employeesTests/EmployeeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1482,40 +1399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/BackingBeanEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#485#486#0" expanded="false" />
-            <element signature="e#508#509#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#558#559#0" expanded="false" />
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#626#627#0" expanded="false" />
-            <element signature="e#659#660#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1527,60 +1410,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/NameValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeesView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/employeesTests/EmployeeCreatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#833#834#0" expanded="false" />
-            <element signature="e#899#900#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1745#1746#0" expanded="false" />
-            <element signature="e#1774#1775#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1588,58 +1421,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding>
-            <element signature="e#218#219#0" expanded="false" />
-            <element signature="e#237#238#0" expanded="false" />
-            <element signature="e#276#277#0" expanded="false" />
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#330#331#0" expanded="false" />
-            <element signature="e#349#350#0" expanded="false" />
-            <element signature="e#388#389#0" expanded="false" />
-            <element signature="e#413#414#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#513#514#0" expanded="false" />
+            <element signature="e#535#536#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/employees.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="18" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/employees/details.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1648,7 +1446,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#597#598#0" expanded="false" />
+            <element signature="e#644#645#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1656,23 +1458,301 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#598#599#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Employee.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        <state relative-caret-position="306">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/BackingBeanEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/6.0/primefaces-6.0-sources.jar!/org/primefaces/renderkit/InputRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/6.0/primefaces-6.0-sources.jar!/org/primefaces/component/selectonemenu/SelectOneMenuRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="66" column="78" selection-start-line="66" selection-start-column="78" selection-end-line="66" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/6.0/primefaces-6.0-sources.jar!/org/primefaces/component/dialog/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="424" column="0" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
+        <state relative-caret-position="338">
+          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+          <folding>
+            <element signature="e#2418#2419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+          <folding>
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#528#529#0" expanded="false" />
+            <marker date="1468933677437" expanded="true" signature="588:758" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeesView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="e#798#799#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#900#901#0" expanded="false" />
+            <element signature="e#943#944#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1015#1016#0" expanded="false" />
+            <element signature="e#1078#1079#0" expanded="false" />
+            <element signature="e#1125#1126#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+          <folding>
+            <element signature="e#2458#2459#0" expanded="false" />
+            <element signature="e#2483#2484#0" expanded="false" />
+            <element signature="e#2523#2524#0" expanded="false" />
+            <element signature="e#2551#2552#0" expanded="false" />
+            <element signature="e#2579#2580#0" expanded="false" />
+            <element signature="e#2597#2598#0" expanded="false" />
+            <element signature="e#2634#2635#0" expanded="false" />
+            <element signature="e#2657#2658#0" expanded="false" />
+            <element signature="e#2688#2689#0" expanded="false" />
+            <element signature="e#2709#2710#0" expanded="false" />
+            <element signature="e#2752#2753#0" expanded="false" />
+            <element signature="e#2781#2782#0" expanded="false" />
+            <element signature="e#2810#2811#0" expanded="false" />
+            <element signature="e#2829#2830#0" expanded="false" />
+            <element signature="e#2868#2869#0" expanded="false" />
+            <element signature="e#2893#2894#0" expanded="false" />
+            <element signature="e#2926#2927#0" expanded="false" />
+            <element signature="e#2949#2950#0" expanded="false" />
+            <element signature="e#2996#2997#0" expanded="false" />
+            <element signature="e#3029#3030#0" expanded="false" />
+            <element signature="e#3058#3059#0" expanded="false" />
+            <element signature="e#3077#3078#0" expanded="false" />
+            <element signature="e#3116#3117#0" expanded="false" />
+            <element signature="e#3141#3142#0" expanded="false" />
+            <element signature="e#3171#3172#0" expanded="false" />
+            <element signature="e#3191#3192#0" expanded="false" />
+            <element signature="e#3232#3233#0" expanded="false" />
+            <element signature="e#3259#3260#0" expanded="false" />
+            <element signature="e#3297#3298#0" expanded="false" />
+            <element signature="e#3321#3322#0" expanded="false" />
+            <element signature="e#3374#3375#0" expanded="false" />
+            <element signature="e#3409#3410#0" expanded="false" />
+            <element signature="e#3440#3441#0" expanded="false" />
+            <element signature="e#3461#3462#0" expanded="false" />
+            <element signature="e#3504#3505#0" expanded="false" />
+            <element signature="e#3533#3534#0" expanded="false" />
+            <element signature="e#3855#3856#0" expanded="false" />
+            <element signature="e#3927#3928#0" expanded="false" />
+            <element signature="e#4215#4216#0" expanded="false" />
+            <element signature="e#4252#4253#0" expanded="false" />
+            <marker date="1468934497007" expanded="true" signature="65:736" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Assignment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
           <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+          <folding>
+            <element signature="e#1615#1616#0" expanded="false" />
+            <element signature="e#1640#1641#0" expanded="false" />
+            <element signature="e#1675#1676#0" expanded="false" />
+            <element signature="e#1702#1703#0" expanded="false" />
+            <element signature="e#1744#1745#0" expanded="false" />
+            <element signature="e#1774#1775#0" expanded="false" />
+            <element signature="e#1803#1804#0" expanded="false" />
+            <element signature="e#1822#1823#0" expanded="false" />
+            <element signature="e#1861#1862#0" expanded="false" />
+            <element signature="e#1886#1887#0" expanded="false" />
+            <element signature="e#1926#1927#0" expanded="false" />
+            <element signature="e#1945#1946#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+          <folding>
+            <element signature="e#2491#2492#0" expanded="false" />
+            <element signature="e#2520#2521#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/employeesTests/EmployeeCreatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/employeesStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <marker date="1468936248107" expanded="true" signature="13:32" ph="{...}" />
+            <marker date="1468936248107" expanded="true" signature="86:105" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeRemover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/RemoveEmployeeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/AssignmentConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/employees.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/employees/details.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

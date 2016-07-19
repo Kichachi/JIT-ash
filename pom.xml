@@ -24,7 +24,6 @@
 			<version>1.0.3.Final</version>
 			<type>pom</type>
 		</dependency>
-
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>

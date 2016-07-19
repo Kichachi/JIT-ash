@@ -19,7 +19,7 @@ public class EmployeeTest {
 		builder = new Employee.EmployeeBuilder();
 
 		employee = new Employee();
-		employee.setId(10L);
+		employee.setEmployee_id(10L);
 		employee.setName("Jan");
 		employee.setSurname("Kowalski");
 		employee.setPESEL("95091192384");
@@ -29,7 +29,7 @@ public class EmployeeTest {
 
 	@Test
 	public void idShouldBeNotNull(){
-		assertNotNull(employee.getId());
+		assertNotNull(employee.getEmployee_id());
 	}
 
 	@Test

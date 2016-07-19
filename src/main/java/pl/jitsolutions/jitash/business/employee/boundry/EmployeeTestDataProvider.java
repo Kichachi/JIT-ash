@@ -10,6 +10,7 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.inject.Inject;
 
+import pl.jitsolutions.jitash.business.employee.entity.Assignment;
 import pl.jitsolutions.jitash.business.employee.entity.Employee;
 import pl.jitsolutions.jitash.business.employee.entity.Status;
 
@@ -19,8 +20,13 @@ public class EmployeeTestDataProvider {
 	private final static String[] names;
 	private final static String[] surnames;
 	private final static String[] emails;
+	private final static String[] assignments;
 	@Inject
 	private EmployeeCreator employeeCreator;
+	@Inject
+	private AssignmentCreator assignmentCreator;
+	@Inject
+	private AssignmentsProvider assignmentsProvider;
 
 	static {
 		names = new String[] { "Michal", "Mikolaj", "Mateusz", "Piotr", "Lukasz", "Krzysztof", "Marta", "Agata",
@@ -28,7 +34,7 @@ public class EmployeeTestDataProvider {
 		surnames = new String[] { "Garbarczyk", "Stobinski", "Modrzejewski", "Raszkowski", "Ziolkowski", "Laptop",
 				"Cymerys", "Wicikowska", "Pelzner", "Milewicz", "Lys" };
 		emails = new String[] { "@wp.pl", "@gmail.com", "@jitsolutions.pl", "@najlepszyserwisswiata.world" };
-
+		assignments = new String[] { "JIT Solutions", "LPP", "Nordea" };
 	}
 
 	public List<Employee> createEmployees(int size) {
@@ -49,8 +55,13 @@ public class EmployeeTestDataProvider {
 
 	@PostConstruct
 	private void init() {
+		for (String assignment : assignments){
+			assignmentCreator.save(new Assignment(assignment));
+		}
 		for (int i = 0; i < 200; i++) {
 			Employee employee = generateEmployee();
+			Assignment assignment = assignmentsProvider.getAssignmentById((long)Math.floor(Math.random()*3)+1);
+			employee.setAssignment(assignment);
 			employeeCreator.save(employee);
 		}
 	}
@@ -84,5 +95,9 @@ public class EmployeeTestDataProvider {
 
 	private Status getRandomActive() {
 		return (Math.random() > 0.5) ? Status.ACTIVE : Status.INACTIVE;
+	}
+
+	private Assignment getRandomAssignment() {
+		return new Assignment (assignments[(int) (Math.random() * assignments.length)]);
 	}
 }

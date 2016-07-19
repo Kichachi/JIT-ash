@@ -1,0 +1,27 @@
+.ten-percent {
+    width: 10%;
+}
+
+.fifty-percent {
+    width: 50%;
+}
+
+.fourty-percent {
+    width: 40%;
+}
+
+.fullWidth {
+    width:100%;
+}
+
+.top-alignment {
+    vertical-align: top;
+}
+
+.addEmployeeLabel {
+    text-align: right;
+}
+
+.textAreaResize {
+    resize: none;
+}

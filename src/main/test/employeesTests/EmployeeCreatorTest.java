@@ -10,7 +10,7 @@ import org.junit.Test;
 import pl.jitsolutions.jitash.business.employee.boundry.EmployeeCreator;
 import pl.jitsolutions.jitash.business.employee.entity.Employee;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 
 public class EmployeeCreatorTest {
@@ -34,16 +34,13 @@ public class EmployeeCreatorTest {
 	}
 
 	@Test
-	public void creatorOutputMessageShouldBeString(){
-		Assert.assertTrue(creator.save(employee) instanceof String);
+	public void creatorOutputMessageShouldBeBoolean(){
+		Assert.assertTrue(creator.save(employee) instanceof Boolean);
 	}
 
 	@Test
 	public void outputMessageAfterAddingEmployeeShouldBePositive(){
-
-		String expected = "Dodano pracownika";
-
-		assertEquals(expected, creator.save(employee));
+		assertTrue("Output should be true", creator.save(employee));
 	}
 
 }

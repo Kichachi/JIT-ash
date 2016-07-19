@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
 <h:head>
-
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css" />
 </h:head>
 <body>
 <f:metadata>
@@ -12,16 +12,26 @@
                  requiredMessage="Złe zapytanie, użyj linka z listy pracowników request, please use a link from within the system." />
 </f:metadata>
 <h:form id="form" rendered="#{not empty employeeDetailsView.employee}">
-	<p:menubar>
-		<f:facet name="options">
-			<h:outputText value="Zalogowana osoba" />
-			<p:commandButton type="button" value="Wyloguj" icon="ui-icon-extlink" />
-		</f:facet>
-	</p:menubar>
+    <p:growl id="message" showDetail="true" />
+    <p:menubar>
+        <f:facet name="options">
+            <p:commandButton id="menuDeleteEmployee" action="#{removeEmployeeView.remove}" icon="fa fa-user-times">
+                <p:confirm header="Confirmation" message="Czy chcesz dezaktywować pracownika?" icon="ui-icon-alert" />
+            </p:commandButton>
+            <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+            </p:confirmDialog>
+            <p:tooltip id="toolTipDeleteEmployee" for="menuDeleteEmployee" value="Dezaktywuj pracownika"
+                       position="top" />
+            <h:outputText value="Zalogowana osoba" />
+            <p:commandButton type="button" value="Wyloguj" icon="ui-icon-extlink" />
+        </f:facet>
+    </p:menubar>
     <p:outputPanel id="employeeDetail" style="text-align:center;">
         <p:panelGrid columns="2" columnClasses="label,value">
             <h:outputText value="Id:" />
-            <h:outputText value="#{employeeDetailsView.employee.id}" />
+            <h:outputText value="#{employeeDetailsView.employee.employee_id}" />
 
             <h:outputText value="Imię:" />
             <h:outputText value="#{employeeDetailsView.employee.name}" />
@@ -40,6 +50,12 @@
 
             <h:outputText value="Status:" />
             <h:outputText value="#{employeeDetailsView.employee.active.label}" />
+
+            <h:outputText value="Przydział:" />
+            <h:outputText value="#{employeeDetailsView.employee.assignment.value}" />
+
+            <h:outputText value="Komentarz:" />
+            <h:outputText value="#{employeeDetailsView.employee.comment}" />
 
         </p:panelGrid>
     </p:outputPanel>

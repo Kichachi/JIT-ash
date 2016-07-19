@@ -19,15 +19,15 @@ public class EmployeeCreator {
 
 
 	@Transactional
-	public String save(Employee employee) {
+	public Boolean save(Employee employee) {
 
 		try{
-			entityManager.persist(employee);
+			entityManager.merge(employee);
 			entityManager.flush();
-			return "Dodano pracownika";
+			return true;
 		} catch (PersistenceException e) {
 			e.printStackTrace();
-			return "Nie udalo sie dodac pracownika";
+			return false;
 		}
 	}
 }

@@ -4,19 +4,21 @@
       xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
 <h:head>
     <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/employeesStyle.css" />
 </h:head>
 <body>
 
 <h:form id="form">
+
     <p:menubar>
         <f:facet name="options">
             <p:commandButton id="menuAddEmployee" onclick="PF('addEmployeeDlg').show();" icon="fa fa-user-plus" />
-            <p:tooltip id="toolTipAddEmployee" for="menuAddEmployee" value="Dodaj pracownika"
-                       position="top" />
+            <p:tooltip id="toolTipAddEmployee" for="menuAddEmployee" value="Dodaj pracownika" position="top" />
             <h:outputText value="Zalogowana osoba" />
             <p:commandButton type="button" value="Wyloguj" icon="ui-icon-extlink" />
         </f:facet>
     </p:menubar>
+
 
     <p:dialog header="Dodawanie pracownika" widgetVar="existEmployeeDlg" resizable="false" draggable="false"
               modal="true" closable="false" closeOnEscape="false">
@@ -25,44 +27,61 @@
                          oncomplete="PF('existEmployeeDlg').hide()" />
     </p:dialog>
 
-    <p:dialog id="addEmployeeDlg" header="Dodawanie pracownika" widgetVar="addEmployeeDlg" resizable="false"
-              draggable="false" modal="true" width="800">
+
+    <p:dialog id="addEmployeeDlg" header="Dodawanie pracownika" icon="fa fa-user-plus" widgetVar="addEmployeeDlg"
+              resizable="false" draggable="false" modal="true" width="80%">
         <p:ajax event="close" update="addEmployeeDlg" resetValues="true" />
-        <p:panelGrid columns="3" id="employeeAddGrid" layout="grid">
+        <p:panelGrid columns="3" id="employeeAddGrid" layout="grid"
+                     columnClasses="ten-percent top-alignment addEmployeeLabel, fifty-percent top-alignment, fourty-percent top-alignment">
             <p:outputLabel value="Imie: " />
-            <p:inputText id="name" value="#{employeeModel.employee.name}">
-                <!--<f:validator validatorId="nameValidator" />-->
+            <p:inputText id="name" value="#{employeeModel.employee.name}" styleClass="fullWidth">
             </p:inputText>
             <p:message for="name" />
 
             <p:outputLabel value="Nazwisko: " />
-            <p:inputText id="surname" value="#{employeeModel.employee.surname}">
-                <!--<f:validator validatorId="nameValidator" />-->
+            <p:inputText id="surname" value="#{employeeModel.employee.surname}" styleClass="fullWidth">
             </p:inputText>
             <p:message for="surname" />
 
             <p:outputLabel value="Pesel: " />
-            <p:inputText id="pesel" value="#{employeeModel.employee.PESEL}">
-                <!--<f:validator validatorId="peselValidator" />-->
+            <p:inputText id="pesel" value="#{employeeModel.employee.PESEL}" styleClass="fullWidth">
             </p:inputText>
             <p:message for="pesel" />
 
             <p:outputLabel value="E-mail: " />
-            <p:inputText id="email" value="#{employeeModel.employee.email}">
-                <!--<f:validator validatorId="emailValidator" />-->
+            <p:inputText id="email" value="#{employeeModel.employee.email}" styleClass="fullWidth">
             </p:inputText>
             <p:message for="email" />
 
             <p:outputLabel value="Nr telefonu: " />
-            <p:inputText id="phone" value="#{employeeModel.employee.telephone}">
-                <!--<f:validator validatorId="phoneValidator" />-->
+            <p:inputText id="phone" value="#{employeeModel.employee.telephone}" styleClass="fullWidth">
             </p:inputText>
             <p:message for="phone" />
+
+            <p:outputLabel value="Przydział: " />
+            <p:selectOneMenu id="assignment" converter="#{assignmentConverter}"
+                             value="#{employeeModel.employee.assignment}" styleClass="fullWidth">
+                <f:selectItems value="#{addEmployeeView.assignments}" var="assignment" itemLabel="#{assignment.value}"
+                               itemValue="#{assignment}" />
+            </p:selectOneMenu>
+            <p:message for="assignment" />
         </p:panelGrid><br />
-        <p:commandButton value="Zapisz" update="employeeAddGrid addEmployeViewMessage" action="#{addEmployeeView.save}"
+
+        <p:outputLabel value="Komentarz: " /><br />
+        <p:panel columns="1" id="employeeAddComment" styleClass="fullWidth">
+            <p:inputTextarea id="comment" value="#{employeeModel.employee.comment}" rows="5"
+                             styleClass="fullWidth textAreaResize" maxlength="1024"
+                             counterTemplate="Pozostało {0} znaków." autoResize="false" counter="display" />
+            <h:outputText id="display" />
+            <p:message for="comment" />
+        </p:panel>
+        <p:commandButton value="Zapisz" update="employeeAddGrid addEmployeViewMessage employeeAddComment"
+                         action="#{addEmployeeView.save}"
                          oncomplete="if (args &amp;&amp; !args.validationFailed) PF('existEmployeeDlg').show()" />
         <p:outputLabel widgetVar="messageExists" value="#{addEmployeeView.employeeMessage}" style="color:red;" />
     </p:dialog>
+
+
     <p:dataTable var="employee" value="#{employeesView.employeesModel}" paginator="true" rows="10" paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink}
                   {CurrentPageReport} {NextPageLink} {LastPageLink}" rowsPerPageTemplate="10,20,50" id="employeesTable"
                  lazy="true" paginatorPosition="bottom" widgetVar="employeesTable" selectionMode="single"
@@ -70,8 +89,9 @@
                  emptyMessage="Nie znaleziono pracowników o zadanych kryteriach">
         <p:ajax event="rowSelect" listener="#{employeesView.onRowSelect}" update=":form:employeeDetail"
                 oncomplete="PF('employeeDlg').show()" />
-        <p:column headerText="Id" sortBy="#{employee.id}" filterBy="#{employee.id}" filterStyle="width: 80%;">
-            <h:outputText value="#{employee.id}" />
+        <p:column headerText="Id" sortBy="#{employee.employee_id}" filterBy="#{employee.employee_id}"
+                  filterStyle="width: 80%;">
+            <h:outputText value="#{employee.employee_id}" />
         </p:column>
         <p:column headerText="Imię" sortBy="#{employee.name}" filterBy="#{employee.name}" filterStyle="width: 80%;">
             <h:outputText value="#{employee.name}" />
@@ -79,6 +99,16 @@
         <p:column headerText="Nazwisko" sortBy="#{employee.surname}" filterBy="#{employee.surname}"
                   filterStyle="width: 80%;">
             <h:outputText value="#{employee.surname}" />
+        </p:column>
+        <p:column headerText="Przydział" sortBy="#{employee.assignment}" filterBy="#{employee.assignment}"
+                  filterStyle="width: 80%;">
+            <f:facet name="filter">
+                <p:selectOneMenu onchange="PF('employeesTable').filter()">
+                    <f:selectItem itemLabel="Wybierz jeden" itemValue="#{null}" noSelectionOption="true" />
+                    <f:selectItems value="#{employeesView.employeesModel.assignments}" />
+                </p:selectOneMenu>
+            </f:facet>
+            <h:outputText value="#{employee.assignment}" />
         </p:column>
         <p:column filterBy="#{employee.active}" headerText="Status" filterMatchMode="equals" filterStyle="width: 80%;">
             <f:facet name="filter">
@@ -91,12 +121,13 @@
         </p:column>
     </p:dataTable>
 
+
     <p:dialog header="Dane pracownika" widgetVar="employeeDlg" modal="true" showEffect="fade" hideEffect="fade"
               resizable="false">
         <p:outputPanel id="employeeDetail" style="text-align:center;">
             <p:panelGrid columns="2" rendered="#{not empty employeesView.selectedEmployee}" columnClasses="label,value">
                 <h:outputText value="Id:" />
-                <h:outputText value="#{employeesView.selectedEmployee.id}" />
+                <h:outputText value="#{employeesView.selectedEmployee.employee_id}" />
 
                 <h:outputText value="Imię:" />
                 <h:outputText value="#{employeesView.selectedEmployee.name}" />
@@ -116,9 +147,15 @@
                 <h:outputText value="Status:" />
                 <h:outputText value="#{employeesView.selectedEmployee.active.label}" />
 
+                <h:outputText value="Przydział:" />
+                <h:outputText value="#{employeesView.selectedEmployee.assignment.value}" />
+
+                <h:outputText value="Komentarz:" />
+                <h:outputText value="#{employeesView.selectedEmployee.comment}" />
+
             </p:panelGrid>
             <p:button value="Pokaż szczegóły pracownika" outcome="details">
-                <f:param name="id" value="#{employeesView.selectedEmployee.id}" />
+                <f:param name="id" value="#{employeesView.selectedEmployee.employee_id}" />
             </p:button>
         </p:outputPanel>
     </p:dialog>

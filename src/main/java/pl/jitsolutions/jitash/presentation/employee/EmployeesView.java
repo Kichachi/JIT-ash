@@ -11,14 +11,15 @@ import javax.inject.Named;
 import org.primefaces.event.SelectEvent;
 import org.primefaces.model.LazyDataModel;
 
-import pl.jitsolutions.jitash.business.employee.boundry.EmployeesProvider;
 import pl.jitsolutions.jitash.business.employee.entity.Employee;
 
 @Named
 @RequestScoped
 public class EmployeesView implements Serializable {
-	@Inject
-	private EmployeesProvider employeesProvider;
+//	@Inject
+//	private EmployeesProvider employeesProvider;
+//	@Inject
+//	private AssignmentsProvider assignmentsProvider;
 	@Inject
 	private LazyDataModel<Employee> employeesModel;
 
@@ -43,13 +44,10 @@ public class EmployeesView implements Serializable {
 	}
 
 	public void onRowSelect(SelectEvent event) {
-		FacesMessage msg = new FacesMessage("Employee Selected", ((Employee) event.getObject()).getId().toString());
+		FacesMessage msg = new FacesMessage("Employee Selected", ((Employee) event.getObject()).getEmployee_id().toString());
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 	}
 
-	public void showEmployeeDetails() {
-
-
-	}
+	public void showEmployeeDetails() {	}
 
 }
