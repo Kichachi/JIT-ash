@@ -4,6 +4,7 @@
       xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
 <h:head>
     <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/employeesStyle.css" />
 </h:head>
 <body>
 <f:metadata>
@@ -15,7 +16,8 @@
     <p:growl id="message" showDetail="true" />
     <p:menubar>
         <f:facet name="options">
-            <p:commandButton id="menuDeleteEmployee" action="#{removeEmployeeView.remove}" icon="fa fa-user-times">
+            <p:commandButton id="menuDeleteEmployee" action="#{removeEmployeeView.remove}"
+                             rendered="#{removeEmployeeView.selectedEmployeeActive}" icon="fa fa-user-times">
                 <p:confirm header="Confirmation" message="Czy chcesz dezaktywować pracownika?" icon="ui-icon-alert" />
             </p:commandButton>
             <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">

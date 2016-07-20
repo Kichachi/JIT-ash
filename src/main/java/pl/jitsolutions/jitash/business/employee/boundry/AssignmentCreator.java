@@ -19,14 +19,14 @@ public class AssignmentCreator {
 
 
 	@Transactional
-	public String save(Assignment assignment) {
+	public Boolean save(Assignment assignment) {
 		try{
 			entityManager.persist(assignment);
 			entityManager.flush();
-			return "Dodano przydzial";
+			return true;
 		} catch (PersistenceException e) {
 			e.printStackTrace();
-			return "Nie udalo sie dodac przydzialu";
+			return false;
 		}
 	}
 }

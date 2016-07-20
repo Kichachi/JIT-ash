@@ -14,8 +14,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 
-import org.primefaces.context.RequestContext;
-
 import pl.jitsolutions.jitash.business.employee.boundry.AssignmentsProvider;
 import pl.jitsolutions.jitash.business.employee.boundry.EmployeeCreator;
 import pl.jitsolutions.jitash.business.employee.boundry.EmployeesProvider;
@@ -65,7 +63,6 @@ public class AddEmployeeView implements Serializable {
 				employeeMessage = failMessage;
 			}
 		}
-		RequestContext.getCurrentInstance().update("addEmployeeViewMessage");
 		return employeeMessage;
 	}
 

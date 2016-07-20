@@ -2,6 +2,10 @@
     width: 10%;
 }
 
+.fifteen-percent {
+    width: 15%
+}
+
 .twenty-percent {
     width: 20%;
 }
@@ -14,13 +18,22 @@
     width: 40%;
 }
 
+.fourtyfive-percent {
+    width: 45%;
+}
+
 .fifty-percent {
     width: 50%;
+}
+
+.ninety-percent {
+    width: 90%;
 }
 
 .fullWidth {
     width:100%;
 }
+
 
 .top-alignment {
     vertical-align: top;
@@ -30,6 +43,9 @@
     text-align: right;
 }
 
-.textAreaResize {
+.textArea {
     resize: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

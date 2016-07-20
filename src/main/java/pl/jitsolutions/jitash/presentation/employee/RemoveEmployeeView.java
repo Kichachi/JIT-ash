@@ -36,12 +36,6 @@ public class RemoveEmployeeView implements Serializable {
 
 	}
 
-	public boolean isEmployeeActive(){
-
-		if(isSelectedEmployeeActive()) return true;
-		else return false;
-	}
-
 	public boolean isSelectedEmployeeActive(){
 		return employeeDetail.getEmployee().getActive() == Status.ACTIVE;
 	}
