@@ -2,12 +2,20 @@
     width: 10%;
 }
 
-.fifty-percent {
-    width: 50%;
+.twenty-percent {
+    width: 20%;
+}
+
+.thirty-percent {
+    width: 30%;
 }
 
 .fourty-percent {
     width: 40%;
+}
+
+.fifty-percent {
+    width: 50%;
 }
 
 .fullWidth {

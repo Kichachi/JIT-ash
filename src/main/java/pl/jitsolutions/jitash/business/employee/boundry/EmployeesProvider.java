@@ -41,20 +41,28 @@ public class EmployeesProvider {
 		Predicate filterCondition = criteriaBuilder.conjunction();
 		String wildCard = "%";
 		for (Map.Entry<String, Object> filter : filters.entrySet()) {
-			String value = wildCard + filter.getValue() + wildCard;
 			if (!filter.getValue().equals("")) {
-				if (filter.getKey().equals("assignment")) {
-					javax.persistence.criteria.Path<Assignment> path = myObj.get(filter.getKey());
+				switch(filter.getKey()){
+				case "assignment":
+					Path<Assignment> assignmentPath = myObj.get(filter.getKey());
 					Assignment assignment = assignmentsProvider.getAssignmentByValue(filter.getValue().toString());
+					filterCondition = criteriaBuilder.and(filterCondition, criteriaBuilder.equal(assignmentPath, assignment));
+					break;
+				case "employee_id":
+					Path<Long>pathEmployee = myObj.get(filter.getKey());
+					filterCondition = criteriaBuilder.and(filterCondition,
+							criteriaBuilder.equal(pathEmployee, Long.valueOf(filter.getValue().toString())));
+					break;
+				case "active":
+					Path<Status> pathActive = myObj.get(filter.getKey());
 					filterCondition = criteriaBuilder
-							.and(filterCondition, criteriaBuilder.equal(path, assignment));
-				} else if (filter.getValue() instanceof Status) {
-					javax.persistence.criteria.Path<Status> path = myObj.get(filter.getKey());
-					filterCondition = criteriaBuilder
-							.and(filterCondition, criteriaBuilder.equal(path, filter.getValue()));
-				} else if (filter.getValue() instanceof String) {
+							.and(filterCondition, criteriaBuilder.equal(pathActive, filter.getValue()));
+					break;
+				default:
+					String value = wildCard + filter.getValue() + wildCard;
 					Path<String> path = myObj.get(filter.getKey());
 					filterCondition = criteriaBuilder.and(filterCondition, criteriaBuilder.like(path, value));
+					break;
 				}
 			}
 		}
