@@ -2,60 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9477dd9-9220-4d73-8e65-9a8b0ad256c4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash.war" afterPath="$PROJECT_DIR$/target/JITash.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/presentation/employee/AddAssignmentView.class" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/pl/jitsolutions/jitash/presentation/employee/AddAssignmentView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/presentation/employee/AddAssignmentView.class" afterPath="$PROJECT_DIR$/target/classes/pl/jitsolutions/jitash/presentation/employee/AddAssignmentView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JIT ASH.iml" afterPath="$PROJECT_DIR$/JIT ASH.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeRemover.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeRemover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeTestDataProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Assignment.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Assignment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/LazyEmployeeDataModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Status.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Status.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/AssignmentConverter.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/AssignmentConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/BackingBeanEmployee.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/util/BackingBeanEmployee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddAssignmentView.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddAssignmentView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AddEmployeeView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AssignmentModel.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AssignmentModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeModel.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/EmployeeModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/RemoveEmployeeView.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/RemoveEmployeeView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/EmailValidator.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/EmailValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/NameValidator.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/NameValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/PeselValidator.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/PeselValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/PhoneValidator.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/validation/PhoneValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/jboss-deployment-structure.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/jboss-deployment-structure.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeCreatorTest.java" afterPath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeCreatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeTest.java" afterPath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeesProviderTest.java" afterPath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeesProviderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeesViewTest.java" afterPath="$PROJECT_DIR$/src/main/test/employeesTests/EmployeesViewTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/employeesTests/LazyEmployeeDataModelTest.java" afterPath="$PROJECT_DIR$/src/main/test/employeesTests/LazyEmployeeDataModelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/employeesStyle.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/employeesStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/employees.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/employees.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/employees/details.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/employees/details.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/META-INF/jboss-deployment-structure.xml" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/META-INF/jboss-deployment-structure.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/JITash/WEB-INF/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/css/employeesStyle.css" afterPath="$PROJECT_DIR$/target/JITash/css/employeesStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JITash/employees.xhtml" afterPath="$PROJECT_DIR$/target/JITash/employees.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/jboss-deployment-structure.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/jboss-deployment-structure.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java" afterPath="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java" />
     </list>
     <ignored path="JIT ASH.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,7 +39,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="employees.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="employees.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/employees.xhtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
@@ -135,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeesProvider.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeesProvider.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="76" selection-end-column="59" />
+            <state relative-caret-position="552">
+              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -261,7 +209,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/entity/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/test/employeesTests/EmployeeCreatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeeRemover.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/presentation/employee/AssignmentModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.java" />
@@ -271,6 +218,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/employees/details.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/employeesStyle.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/employees.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java" />
       </list>
     </option>
   </component>
@@ -1210,7 +1158,7 @@
       <workItem from="1468908993493" duration="27707000" />
       <workItem from="1468997510308" duration="6624000" />
       <workItem from="1469009123522" duration="824000" />
-      <workItem from="1469009990924" duration="3652000" />
+      <workItem from="1469009990924" duration="4345000" />
     </task>
     <servers />
   </component>
@@ -1247,7 +1195,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154767000" />
+    <option name="totallyTimeSpent" value="155460000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1274,7 +1222,7 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.319598" sideWeight="0.76147705" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.319598" sideWeight="0.76147705" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.48773986" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2321608" sideWeight="0.41666666" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1282,7 +1230,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42211056" sideWeight="0.62025946" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21668473" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23718593" sideWeight="0.46357286" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23718593" sideWeight="0.46357286" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2010978" sideWeight="0.32988167" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2010978" sideWeight="0.67011833" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1636,14 +1584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="76" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/AssignmentsProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1719,6 +1659,14 @@
           <folding>
             <marker date="1469013581986" expanded="true" signature="4660:4712" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/jitsolutions/jitash/business/employee/boundry/EmployeesProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

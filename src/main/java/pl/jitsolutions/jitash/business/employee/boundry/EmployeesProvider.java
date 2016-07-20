@@ -42,14 +42,15 @@ public class EmployeesProvider {
 		String wildCard = "%";
 		for (Map.Entry<String, Object> filter : filters.entrySet()) {
 			if (!filter.getValue().equals("")) {
-				switch(filter.getKey()){
+				switch (filter.getKey()) {
 				case "assignment":
 					Path<Assignment> assignmentPath = myObj.get(filter.getKey());
 					Assignment assignment = assignmentsProvider.getAssignmentByValue(filter.getValue().toString());
-					filterCondition = criteriaBuilder.and(filterCondition, criteriaBuilder.equal(assignmentPath, assignment));
+					filterCondition = criteriaBuilder
+							.and(filterCondition, criteriaBuilder.equal(assignmentPath, assignment));
 					break;
 				case "employee_id":
-					Path<Long>pathEmployee = myObj.get(filter.getKey());
+					Path<Long> pathEmployee = myObj.get(filter.getKey());
 					filterCondition = criteriaBuilder.and(filterCondition,
 							criteriaBuilder.equal(pathEmployee, Long.valueOf(filter.getValue().toString())));
 					break;
@@ -86,16 +87,17 @@ public class EmployeesProvider {
 
 	public List<Employee> getResultList(int first, int pageSize, String sortField, SortOrder sortOrder,
 			Map<String, Object> filters) {
+		if (sortField == null) {
+			sortField = "employee_id";
+		}
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
 		CriteriaQuery<Employee> criteriaQuery = criteriaBuilder.createQuery(Employee.class);
 		Root<Employee> myObj = criteriaQuery.from(Employee.class);
 		criteriaQuery.where(getFilterCondition(criteriaBuilder, myObj, filters));
-		if (sortField != null) {
-			if (sortOrder == SortOrder.ASCENDING) {
-				criteriaQuery.orderBy(criteriaBuilder.asc(myObj.get(sortField)));
-			} else if (sortOrder == SortOrder.DESCENDING) {
-				criteriaQuery.orderBy(criteriaBuilder.desc(myObj.get(sortField)));
-			}
+		if (sortOrder == SortOrder.ASCENDING) {
+			criteriaQuery.orderBy(criteriaBuilder.asc(myObj.get(sortField)));
+		} else if (sortOrder == SortOrder.DESCENDING) {
+			criteriaQuery.orderBy(criteriaBuilder.desc(myObj.get(sortField)));
 		}
 		return entityManager.createQuery(criteriaQuery).setFirstResult(first).setMaxResults(pageSize).getResultList();
 	}
