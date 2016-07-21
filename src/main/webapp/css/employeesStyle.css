@@ -1,3 +1,52 @@
+.addEmployeeLabelColumn{
+    width: 15%;
+    vertical-align: top;
+}
+
+.addEmployeeInputText {
+    width:85%;
+    vertical-align: top;
+    text-align:center;
+}
+
+.addEmployeeGrid {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addEmployeeLabel {
+    text-align: right;
+}
+
+.addEmployeeMessage {
+    width:100%;
+}
+
+.addEmployeeComboBox {
+    width:95%;
+}
+
+.addEmployeeCommentLabel {
+    text-align: left;
+}
+
+.addEmployeeButtonSave {
+    text-align: right;
+}
+
+.textArea {
+    resize: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-selectonemenu{
+    display: flex !important;
+}
+
+
 .ten-percent {
     width: 10%;
 }
@@ -26,6 +75,10 @@
     width: 50%;
 }
 
+.eightyfive-percent {
+    width: 85%;
+}
+
 .ninety-percent {
     width: 90%;
 }
@@ -37,15 +90,4 @@
 
 .top-alignment {
     vertical-align: top;
-}
-
-.addEmployeeLabel {
-    text-align: right;
-}
-
-.textArea {
-    resize: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }

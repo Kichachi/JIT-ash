@@ -26,9 +26,11 @@
             <p:inputText id="newAssignment" value="#{assignmentModel.assignment.value}" styleClass="fullWidth" />
             <p:message for="newAssignment" />
         </p:panelGrid>
-        <p:commandButton value="Dodaj przydział" action="#{addAssignmentView.saveAssignment}"
-                         update="addAssignmentGrid addAssignmentViewMessage"
-                         oncomplete="if (args &amp;&amp; !args.validationFailed) PF('existAssignmentDlg').show()" />
+
+        <p><p:commandButton value="Dodaj przydział" action="#{addAssignmentView.saveAssignment}"
+                            update="addAssignmentGrid addAssignmentViewMessage"
+                            oncomplete="if (args &amp;&amp; !args.validationFailed) PF('existAssignmentDlg').show()" />
+        </p>
     </p:dialog>
 </h:form>
 
@@ -41,54 +43,112 @@
     </p:dialog>
 
     <p:dialog id="addEmployeeDlg" header="Dodawanie pracownika" icon="fa fa-user-plus" widgetVar="addEmployeeDlg"
-              resizable="false" draggable="false" modal="true" width="80%">
+              resizable="false" draggable="true" modal="true" width="50%">
         <p:ajax event="close" update="addEmployeeDlg" resetValues="true" />
-        <p:panelGrid columns="3" id="employeeAddGrid" layout="grid"
-                     columnClasses="fifteen-percent top-alignment addEmployeeLabel, fourtyfive-percent top-alignment, fourty-percent top-alignment">
-            <p:outputLabel value="Imie: " />
-            <p:inputText id="name" value="#{employeeModel.employee.name}" styleClass="fullWidth">
-            </p:inputText>
-            <p:message for="name" />
+        <p:panelGrid id="employeeAddGrid" styleClass="addEmployeeGrid">
+            <p:row>
+                <p:column styleClass="addEmployeeLabelColumn addEmployeeLabel">
+                    <p:outputLabel value="Imie: " />
+                </p:column>
+                <p:column styleClass="addEmployeeInputText">
+                    <p:inputText id="name" value="#{employeeModel.employee.name}" styleClass="fullWidth" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2">
+                    <p:message for="name" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column styleClass="addEmployeeLabelColumn addEmployeeLabel">
+                    <p:outputLabel value="Nazwisko: " />
+                </p:column>
+                <p:column styleClass="addEmployeeInputText">
+                    <p:inputText id="surname" value="#{employeeModel.employee.surname}" styleClass="fullWidth" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2">
+                    <p:message for="surname" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column styleClass="addEmployeeLabelColumn addEmployeeLabel">
+                    <p:outputLabel value="Pesel: " />
+                </p:column>
+                <p:column styleClass="addEmployeeInputText">
+                    <p:inputText id="pesel" value="#{employeeModel.employee.PESEL}" styleClass="fullWidth" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2">
+                    <p:message for="pesel" />
+                </p:column>
+            </p:row>
 
-            <p:outputLabel value="Nazwisko: " />
-            <p:inputText id="surname" value="#{employeeModel.employee.surname}" styleClass="fullWidth">
-            </p:inputText>
-            <p:message for="surname" />
-
-            <p:outputLabel value="Pesel: " />
-            <p:inputText id="pesel" value="#{employeeModel.employee.PESEL}" styleClass="fullWidth">
-            </p:inputText>
-            <p:message for="pesel" />
-
-            <p:outputLabel value="E-mail: " />
-            <p:inputText id="email" value="#{employeeModel.employee.email}" styleClass="fullWidth">
-            </p:inputText>
-            <p:message for="email" />
-
-            <p:outputLabel value="Nr telefonu: " />
-            <p:inputText id="phone" value="#{employeeModel.employee.telephone}" styleClass="fullWidth">
-            </p:inputText>
-            <p:message for="phone" />
-
-            <p:outputLabel value="Przydział: " />
-            <p:selectOneMenu id="assignment" converter="#{assignmentConverter}"
-                             value="#{employeeModel.employee.assignment}" styleClass="ninety-percent">
-                <f:selectItems value="#{addEmployeeView.assignments}" var="assignment" itemLabel="#{assignment.value}"
-                               itemValue="#{assignment}" />
-            </p:selectOneMenu>
-            <p:message for="assignment" />
-        </p:panelGrid><br />
-
-        <p:outputLabel value="Komentarz: " /><br />
-        <p:panel columns="1" id="employeeAddComment" styleClass="fullWidth">
-            <p:inputTextarea id="comment" value="#{employeeModel.employee.comment}" rows="5" style="width: 99%"
-                             styleClass="textArea" maxlength="1024"
-                             counterTemplate="Pozostało {0} znaków." autoResize="false" counter="display" />
-            <h:outputText id="display" />
-            <p:message for="comment" />
-        </p:panel>
-        <p:commandButton value="Zapisz" update="employeeAddGrid addEmployeViewMessage employeeAddComment"
-                         action="#{addEmployeeView.save}"
+            <p:row>
+                <p:column styleClass="addEmployeeLabelColumn addEmployeeLabel">
+                    <p:outputLabel value="E-mail: " />
+                </p:column>
+                <p:column styleClass="addEmployeeInputText">
+                    <p:inputText id="email" value="#{employeeModel.employee.email}" styleClass="fullWidth" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2">
+                    <p:message for="email" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column styleClass="addEmployeeLabelColumn addEmployeeLabel">
+                    <p:outputLabel value="Nr telefonu: " />
+                </p:column>
+                <p:column styleClass="addEmployeeInputText">
+                    <p:inputText id="phone" value="#{employeeModel.employee.telephone}" styleClass="fullWidth" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2">
+                    <p:message for="phone" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column styleClass="addEmployeeLabelColumn addEmployeeLabel">
+                    <p:outputLabel value="Przydział: " />
+                </p:column>
+                <p:column styleClass="addEmployeeInputText">
+                    <p:selectOneMenu id="assignment" converter="#{assignmentConverter}"
+                                     value="#{employeeModel.employee.assignment}" styleClass="addEmployeeComboBox">
+                        <f:selectItems value="#{addEmployeeView.assignments}" var="assignment"
+                                       itemLabel="#{assignment.value}" itemValue="#{assignment}" />
+                    </p:selectOneMenu>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2">
+                    <p:message for="assignment" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2" styleClass="addEmployeeLabel addEmployeeLabelColumn">
+                    <p:outputLabel value="Komentarz: " />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2" styleClass="addEmployeeInputText">
+                    <p:inputTextarea id="comment" value="#{employeeModel.employee.comment}" rows="5"
+                                     styleClass="textArea fullWidth" maxlength="1024"
+                                     counterTemplate="Pozostało {0} znaków." autoResize="false" counter="display" />
+                    <h:outputText id="display" />
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2">
+                    <p:message for="comment" />
+                </p:column>
+            </p:row>
+        </p:panelGrid>
+        <p:commandButton value="Zapisz" update="employeeAddGrid addEmployeViewMessage" action="#{addEmployeeView.save}"
                          oncomplete="if (args &amp;&amp; !args.validationFailed) PF('existEmployeeDlg').show()" />
     </p:dialog>
 
@@ -148,7 +208,6 @@
             <h:outputText value="#{employee.active.label}" />
         </p:column>
     </p:dataTable>
-
 
     <p:dialog header="Dane pracownika" widgetVar="employeeDlg" modal="true" showEffect="fade" hideEffect="fade"
               resizable="false">

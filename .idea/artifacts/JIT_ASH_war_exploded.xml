@@ -37,6 +37,7 @@
           <element id="library" level="project" name="Maven: org.jboss.spec.javax.xml.soap:jboss-saaj-api_1.3_spec:1.0.3.Final" />
           <element id="library" level="project" name="Maven: org.jboss.spec.javax.xml.ws:jboss-jaxws-api_2.2_spec:2.0.2.Final" />
           <element id="library" level="project" name="Maven: org.primefaces:primefaces:6.0" />
+          <element id="library" level="project" name="Maven: org.primefaces.themes:eggplant:1.0.10" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
           <element id="library" level="project" name="Maven: org.postgresql:postgresql:9.4.1208.jre7" />
           <element id="library" level="project" name="Maven: org.mockito:mockito-all:1.9.5" />

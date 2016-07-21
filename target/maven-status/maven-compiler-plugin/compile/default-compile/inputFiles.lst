@@ -1,15 +1,21 @@
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\presentation\employee\AddEmployeeView.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\presentation\employee\EmployeesView.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\JAXRSConfiguration.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeeCreator.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\util\BackingBeanEmployee.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\validation\PhoneValidator.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeeTestDataProvider.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\entity\Status.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\validation\EmailValidator.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\validation\PeselValidator.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\presentation\employee\EmployeeModel.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\entity\Employee.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeesProvider.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\business\employee\entity\LazyEmployeeDataModel.java
-D:\Kichachi\workspace\JIT-ash\src\main\java\pl\jitsolutions\jitash\validation\NameValidator.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\JAXRSConfiguration.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\entity\Assignment.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\AssignmentsProvider.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\entity\Employee.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\presentation\employee\AddEmployeeView.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\AssignmentCreator.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\presentation\employee\EmployeeConverter.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\util\BackingBeanEmployee.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\presentation\employee\AssignmentModel.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\entity\Status.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\presentation\employee\RemoveEmployeeView.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeeRemover.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\util\AssignmentConverter.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\presentation\employee\EmployeeModel.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeeTestDataProvider.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\presentation\employee\AddAssignmentView.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeeCreator.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\boundry\EmployeesProvider.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\presentation\employee\EmployeesView.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\presentation\employee\EmployeeDetailsView.java
+C:\Users\JIT\workspace\JIT ASH\src\main\java\pl\jitsolutions\jitash\business\employee\entity\LazyEmployeeDataModel.java
